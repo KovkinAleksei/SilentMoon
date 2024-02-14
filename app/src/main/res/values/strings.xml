@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Mobile-HARD_MAD_Lab1</string>
+    <string name="silent">Silent</string>
+    <string name="moon">Moon</string>
+    <string name="slogan">We are what we do</string>
+    <string name="silent_moon_description">Thousand of people are using silent moon for smalls meditation</string>
+    <string name="has_account">ALREADY HAVE AN ACCOUNT?</string>
+    <string name="log_in">LOG IN</string>
+    <string name="sign_up">SIGN UP</string>
 </resources>
