@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
@@ -16,7 +15,6 @@ import androidx.core.view.marginBottom
 import androidx.core.view.marginEnd
 import androidx.core.view.marginStart
 import androidx.core.view.marginTop
-import androidx.navigation.fragment.findNavController
 import com.example.mobile_hard_mad_lab1.R
 
 
@@ -43,8 +41,11 @@ class SignInFragment : Fragment() {
         container?.setOnApplyWindowInsetsListener{v, insets ->
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 
+            val welcomeTextView = container.findViewById<TextView>(R.id.welcomeBackTextView)
 
             if (!marginIsFixed) {
+                addTopMargin(welcomeTextView, systemInsets)
+
                 marginIsFixed = true
             }
 

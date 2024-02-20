@@ -28,15 +28,11 @@
         android:layout_height="wrap_content"
 
         android:layout_marginEnd="10dp"
-        android:fontFamily="@font/airbnb_cereal_bold"
-        android:letterSpacing="0.24"
         android:text="@string/silent"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/logoImageView"
         app:layout_constraintEnd_toStartOf="@+id/logoImageView"
-        app:layout_constraintTop_toTopOf="@+id/logoImageView" />
+        app:layout_constraintTop_toTopOf="@+id/logoImageView"
+        style="@style/LogoText"/>
 
     <ImageView
         android:id="@+id/logoImageView"
@@ -55,15 +51,11 @@
         android:layout_height="wrap_content"
 
         android:layout_marginStart="10dp"
-        android:fontFamily="@font/airbnb_cereal_bold"
-        android:letterSpacing="0.24"
         android:text="@string/moon"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/logoImageView"
         app:layout_constraintStart_toEndOf="@+id/logoImageView"
-        app:layout_constraintTop_toTopOf="@+id/logoImageView" />
+        app:layout_constraintTop_toTopOf="@+id/logoImageView"
+        style="@style/LogoText" />
 
     <!-- Изображение -->
     <ImageView
@@ -119,12 +111,9 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/blue"
-        android:fontFamily="@font/helvetica_neue_medium"
         android:text="@string/sign_up"
-        style="@style/Widget.Material3.Button"
+        style="@style/AccentBlueButton"
 
-        android:textSize="14sp"
         app:cornerRadius="38dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -145,12 +134,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:letterSpacing="0.05"
             android:text="@string/has_account"
-            android:textColor="@color/gray"
-            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/RobotoGrayText" />
 
         <TextView
             android:id="@+id/logInTextView"
@@ -158,13 +145,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
 
-            android:clickable="true"
-            android:letterSpacing="0.05"
             android:text="@string/log_in"
-            android:textColor="@color/blue"
-            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/haveAccountTextView" />
+            app:layout_constraintStart_toEndOf="@+id/haveAccountTextView"
+            style="@style/RobotoLinkText" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

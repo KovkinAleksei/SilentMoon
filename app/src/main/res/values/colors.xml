@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#A1A4B2</color>
     <color name="blue">#8E97FD</color>
+    <color name="facebook_bg">#7583CA</color>
+    <color name="stroke_color">#EBEAEC</color>
 </resources>
