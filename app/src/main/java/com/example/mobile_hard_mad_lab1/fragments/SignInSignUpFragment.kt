@@ -17,6 +17,7 @@ import androidx.core.view.marginEnd
 import androidx.core.view.marginStart
 import androidx.core.view.marginTop
 import androidx.navigation.fragment.findNavController
+import com.example.mobile_hard_mad_lab1.ContinueMethodFragment
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentSignInSignUpBinding
@@ -39,11 +40,17 @@ class SignInSignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val logInButton = view.findViewById<TextView>(R.id.logInTextView)
+        val logInButton = binding.logInTextView
+        val signUpButton = binding.signUpButton
         val navController = findNavController()
 
         logInButton.setOnClickListener {
             navController.navigate(R.id.signInFragment)
+            marginIsFixed = false
+        }
+
+        signUpButton.setOnClickListener {
+            navController.navigate(R.id.signUpFragment)
             marginIsFixed = false
         }
     }

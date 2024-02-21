@@ -16,7 +16,7 @@
         android:contentDescription="@null"
         android:scaleType="fitXY"
         android:src="@drawable/sign_in_bg"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/continue_method"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,83 +27,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/roboto_bold"
         android:text="@string/welcome_back"
-        android:textColor="@color/black"
-        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/header1_text" />
 
-    <!--Continue with Facebook-->
-    <LinearLayout
-        android:id="@+id/continue_with_facebook_linear_layout"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/continue_method"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/rounded_shape_38"
-        android:backgroundTint="@color/facebook_bg"
-        android:orientation="horizontal"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeBackTextView">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="30dp"
-            android:contentDescription="@null"
-            android:scaleType="center"
-            android:src="@drawable/facebook_logo" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/continue_with_facebook"
-            android:letterSpacing="0.05"
-            android:textSize="14sp"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:fontFamily="@font/roboto" />
-    </LinearLayout>
-
-    <!--Continue with Google-->
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/rounded_border_38"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/continue_with_facebook_linear_layout">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="30dp"
-            android:contentDescription="@null"
-            android:scaleType="fitXY"
-            android:src="@drawable/google_logo" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:letterSpacing="0.05"
-            android:text="@string/continue_with_google"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeBackTextView"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <!--Or log in with email-->
     <TextView
@@ -115,7 +50,7 @@
         android:text="@string/or_log_in_with_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/continue_method" />
 
     <!--Поля ввода email и пароля-->
     <EditText
