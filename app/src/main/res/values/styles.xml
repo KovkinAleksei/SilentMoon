@@ -27,4 +27,18 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="placeholder_text">
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="input_field" parent="placeholder_text">
+        <item name="android:paddingStart">17dp</item>
+        <item name="android:background">@drawable/rounded_shape_15</item>
+        <item name="android:enabled">false</item>
+        <item name="android:backgroundTint">@color/lighter_gray</item>
+    </style>
 </resources>

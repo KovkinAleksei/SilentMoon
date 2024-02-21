@@ -18,18 +18,22 @@ import androidx.core.view.marginStart
 import androidx.core.view.marginTop
 import androidx.navigation.fragment.findNavController
 import com.example.mobile_hard_mad_lab1.R
+import com.example.mobile_hard_mad_lab1.common.MarginFix
+import com.example.mobile_hard_mad_lab1.databinding.FragmentSignInSignUpBinding
 
 class SignInSignUpFragment : Fragment() {
     private var marginIsFixed = false
+    private lateinit var binding : FragmentSignInSignUpBinding
 
     @SuppressLint("NewApi")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        binding = FragmentSignInSignUpBinding.inflate(inflater, container, false)
         fixMargins(container)
 
-        return inflater.inflate(R.layout.fragment_sign_in_sign_up, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -40,6 +44,7 @@ class SignInSignUpFragment : Fragment() {
 
         logInButton.setOnClickListener {
             navController.navigate(R.id.signInFragment)
+            marginIsFixed = false
         }
     }
 
@@ -49,31 +54,19 @@ class SignInSignUpFragment : Fragment() {
         container?.setOnApplyWindowInsetsListener{v, insets ->
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 
-            val logo = container.findViewById<ImageView>(R.id.logoImageView)
-            val logIn = container.findViewById<TextView>(R.id.logInTextView)
-            val haveAnAccount = container.findViewById<TextView>(R.id.haveAccountTextView)
+            val logo = binding.logoImageView
+            val logIn = binding.logInTextView
+            val haveAnAccount = binding.haveAccountTextView
 
             if (!marginIsFixed) {
-                addTopMargin(logo, systemInsets)
-                addBottomMargin(logIn, systemInsets)
-                addBottomMargin(haveAnAccount, systemInsets)
+                MarginFix.addTopMargin(logo, systemInsets)
+                MarginFix.addBottomMargin(logIn, systemInsets)
+                MarginFix.addBottomMargin(haveAnAccount, systemInsets)
 
                 marginIsFixed = true
             }
 
             insets
         }
-    }
-
-    @RequiresApi(Build.VERSION_CODES.R)
-    private fun addTopMargin(view: View, insets: Insets) {
-        val params = view.layoutParams as ViewGroup.MarginLayoutParams
-        params.setMargins(view.marginStart, view.marginTop + insets.top, view.marginEnd, view.marginBottom)
-    }
-
-    @RequiresApi(Build.VERSION_CODES.R)
-    private fun addBottomMargin(view: View, insets: Insets) {
-        val params = view.layoutParams as ViewGroup.MarginLayoutParams
-        params.setMargins(view.marginStart, view.marginTop, view.marginEnd, view.marginBottom + insets.bottom)
     }
 }

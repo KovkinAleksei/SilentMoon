@@ -8,11 +8,11 @@
 
     <!--Фон экрана-->
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
         android:layout_marginBottom="-16dp"
+        android:layout_marginTop="-8dp"
         android:contentDescription="@null"
         android:scaleType="fitXY"
         android:src="@drawable/sign_in_bg"
@@ -44,7 +44,7 @@
         android:layout_marginTop="24dp"
 
         android:layout_marginEnd="24dp"
-        android:background="@drawable/rounded_shape"
+        android:background="@drawable/rounded_shape_38"
         android:backgroundTint="@color/facebook_bg"
         android:orientation="horizontal"
         android:gravity="center"
@@ -79,7 +79,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:background="@drawable/rounded_border"
+        android:background="@drawable/rounded_border_38"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,5 +104,102 @@
             android:textColor="@color/black"
             android:textSize="14sp" />
     </LinearLayout>
+
+    <!--Or log in with email-->
+    <TextView
+        android:id="@+id/textView"
+        style="@style/RobotoGrayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/or_log_in_with_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <!--Поля ввода email и пароля-->
+    <EditText
+        android:id="@+id/email_input"
+        style="@style/input_field"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editText"
+        style="@style/input_field"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_input" />
+
+    <!--Кнопка Log in-->
+    <com.google.android.material.button.MaterialButton
+        style="@style/AccentBlueButton"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/log_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <!--Forgot password?-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/forgot_password"
+        android:textColor="@color/forgot_password_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Sign up-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/haveAccountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/has_account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/RobotoGrayText" />
+
+        <TextView
+            android:id="@+id/signUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+
+            android:text="@string/sign_up"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/haveAccountTextView"
+            style="@style/RobotoLinkText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
