@@ -25,6 +25,11 @@
         <item name="android:textColor">@color/gray</item>
     </style>
 
+    <style name="gray_subtitle" parent = "roboto_gray_text">
+        <item name="android:letterSpacing">0.0</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
     <style name="roboto_link_text" parent="roboto_text">
         <item name="android:clickable">true</item>
         <item name="android:textColor">@color/blue</item>

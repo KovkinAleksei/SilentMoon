@@ -27,4 +27,8 @@
     <string name="greeting">Hi Asfar, Welcome</string>
     <string name="to_silent_moon">to Silent Moon</string>
     <string name="explore_app">Explore the app, Find some peace of mind to prepare for meditation.</string>
+    <string name="what_brings_you">What brings you</string>
+    <string name="to_silent_moon_question">to Silent Moon?</string>
+    <string name="choose_topic">choose a topic to focuse on:</string>
+    <string name="reduce_stress">Reduce Stress</string>
 </resources>

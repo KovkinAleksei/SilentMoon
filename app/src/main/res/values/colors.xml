@@ -13,6 +13,7 @@
     <color name="blue">#8E97FD</color>
     <color name="facebook_bg">#7583CA</color>
     <color name="hill_color">#8C96FF</color>
+    <color name="reduce_stress_bg_color">#8E97FD</color>
     <color name="light_gray">#EBEAEC</color>
     <color name="greeting_color">#FFECCC</color>
 </resources>

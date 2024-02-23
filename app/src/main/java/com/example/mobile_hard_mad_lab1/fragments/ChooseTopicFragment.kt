@@ -8,14 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
-import androidx.navigation.fragment.findNavController
-import com.example.mobile_hard_mad_lab1.R
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.mobile_hard_mad_lab1.Adapter.ChooseTopicAdapter
 import com.example.mobile_hard_mad_lab1.common.MarginFix
-import com.example.mobile_hard_mad_lab1.databinding.FragmentWelcomeBinding
+import com.example.mobile_hard_mad_lab1.databinding.FragmentChooseTopicBinding
 
-class WelcomeFragment : Fragment() {
-    private var marginIsFixed = false
-    private lateinit var binding : FragmentWelcomeBinding
+class ChooseTopicFragment : Fragment() {
+    private lateinit var binding : FragmentChooseTopicBinding
+    private var marginIsFixed : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,21 +27,23 @@ class WelcomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentWelcomeBinding.inflate(inflater, container, false)
+        binding = FragmentChooseTopicBinding.inflate(inflater, container, false)
         fixMargins(container)
+
+        val recyclerView = binding.recyclerView
+        val viewManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        val viewAdaper = ChooseTopicAdapter(arrayOf("asdf", "fdsa", "tttt", "uu"))
+
+        recyclerView.apply {
+            layoutManager = viewManager
+            adapter = viewAdaper
+        }
 
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val navController = findNavController()
 
-        val getStartedButton = binding.getStartedButton
-
-        getStartedButton.setOnClickListener {
-            navController.navigate(R.id.chooseTopicFragment)
-            marginIsFixed = false
-        }
     }
 
     // Выравнивание отступов относительно статус бара и системной навигационной панели
@@ -48,15 +51,10 @@ class WelcomeFragment : Fragment() {
     private fun fixMargins(container: ViewGroup?) {
         container?.setOnApplyWindowInsetsListener{v, insets ->
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-
-            val logoImageView = binding.logoImageView
-            val getStartedButton = binding.getStartedButton
-            val hillBase = binding.hillBaseConstraintLayout
+            val questionTextView = binding.questionTextView
 
             if (!marginIsFixed) {
-                MarginFix.addTopMargin(logoImageView, systemInsets)
-                MarginFix.addBottomMargin(getStartedButton, systemInsets)
-                MarginFix.addBottomMargin(hillBase, systemInsets)
+                MarginFix.addTopMargin(questionTextView, systemInsets)
 
                 marginIsFixed = true
             }
