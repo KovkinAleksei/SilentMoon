@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/header1_text" />
+        style="@style/header_text" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/continue_method"
@@ -43,7 +43,7 @@
     <!--Or log in with email-->
     <TextView
         android:id="@+id/textView"
-        style="@style/RobotoGrayText"
+        style="@style/roboto_gray_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -81,7 +81,8 @@
 
     <!--Кнопка Log in-->
     <com.google.android.material.button.MaterialButton
-        style="@style/AccentBlueButton"
+        android:id="@+id/logInButton"
+        style="@style/accent_blue_button"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_marginStart="24dp"
@@ -99,7 +100,7 @@
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/roboto"
         android:text="@string/forgot_password"
-        android:textColor="@color/forgot_password_color"
+        android:textColor="@color/almost_black"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,7 +124,7 @@
             android:text="@string/has_account"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            style="@style/RobotoGrayText" />
+            style="@style/roboto_gray_text" />
 
         <TextView
             android:id="@+id/signUpTextView"
@@ -134,7 +135,7 @@
             android:text="@string/sign_up"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/haveAccountTextView"
-            style="@style/RobotoLinkText" />
+            style="@style/roboto_link_text" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

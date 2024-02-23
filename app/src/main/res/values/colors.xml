@@ -6,11 +6,13 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="almost_black">#3F414E</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#A1A4B2</color>
-    <color name="lighter_gray">#F2F3F7</color>
+    <color name="gray_fill_color">#F2F3F7</color>
     <color name="blue">#8E97FD</color>
     <color name="facebook_bg">#7583CA</color>
-    <color name="stroke_color">#EBEAEC</color>
-    <color name="forgot_password_color">#3F414E</color>
+    <color name="hill_color">#8C96FF</color>
+    <color name="light_gray">#EBEAEC</color>
+    <color name="greeting_color">#FFECCC</color>
 </resources>

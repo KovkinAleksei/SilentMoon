@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
@@ -18,7 +19,7 @@ import androidx.core.view.marginTop
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        enableEdgeToEdge()
+        enableEdgeToEdge(navigationBarStyle = SystemBarStyle.light(1,1))
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

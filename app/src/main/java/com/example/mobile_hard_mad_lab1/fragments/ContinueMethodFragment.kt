@@ -1,10 +1,11 @@
-package com.example.mobile_hard_mad_lab1
+package com.example.mobile_hard_mad_lab1.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.mobile_hard_mad_lab1.R
 
 class ContinueMethodFragment : Fragment() {
 

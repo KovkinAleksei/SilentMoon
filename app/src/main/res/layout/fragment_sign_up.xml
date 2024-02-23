@@ -22,7 +22,7 @@
     <!--Create your account-->
     <TextView
         android:id="@+id/createAccountTextView"
-        style="@style/header1_text"
+        style="@style/header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -42,7 +42,7 @@
     <!--Or sign up with email-->
     <TextView
         android:id="@+id/textView2"
-        style="@style/RobotoGrayText"
+        style="@style/roboto_gray_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -54,14 +54,13 @@
     <!--Поле ввода имени пользователя-->
     <EditText
         android:id="@+id/email_input"
-        style="@style/input_field"
+        style="@style/filled_input_text"
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:text="@string/afsar"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -79,14 +78,13 @@
     <!--Поле ввода email пользователя-->
     <EditText
         android:id="@+id/editText2"
-        style="@style/input_field"
+        style="@style/filled_input_text"
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:text="@string/email_example"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_input" />
@@ -104,7 +102,7 @@
     <!--Поле ввода пароля-->
     <EditText
         android:id="@+id/editText3"
-        style="@style/input_field"
+        style="@style/filled_input_text"
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:layout_marginStart="24dp"
@@ -112,7 +110,6 @@
         android:layout_marginEnd="24dp"
         android:inputType="textPassword"
         android:text="@string/password_example"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
@@ -140,7 +137,7 @@
 
         <TextView
             android:id="@+id/textView3"
-            style="@style/RobotoGrayText"
+            style="@style/roboto_gray_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/i_have_read"
@@ -150,7 +147,7 @@
 
         <TextView
             android:id="@+id/privacyPolicy"
-            style="@style/RobotoLinkText"
+            style="@style/roboto_link_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
@@ -171,7 +168,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/getStartedButton"
-        style="@style/AccentBlueButton"
+        style="@style/accent_blue_button"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_marginStart="24dp"

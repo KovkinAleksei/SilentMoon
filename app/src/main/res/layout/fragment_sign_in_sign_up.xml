@@ -32,7 +32,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/logoImageView"
         app:layout_constraintEnd_toStartOf="@+id/logoImageView"
         app:layout_constraintTop_toTopOf="@+id/logoImageView"
-        style="@style/LogoText"/>
+        style="@style/logo_text"/>
 
     <ImageView
         android:id="@+id/logoImageView"
@@ -55,7 +55,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/logoImageView"
         app:layout_constraintStart_toEndOf="@+id/logoImageView"
         app:layout_constraintTop_toTopOf="@+id/logoImageView"
-        style="@style/LogoText" />
+        style="@style/logo_text" />
 
     <!-- Изображение -->
     <ImageView
@@ -77,11 +77,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:fontFamily="@font/roboto_bold"
         android:text="@string/slogan"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        style="@style/bigger_header_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/introduceImageView" />
@@ -112,7 +109,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
         android:text="@string/sign_up"
-        style="@style/AccentBlueButton"
+        style="@style/accent_blue_button"
 
         app:cornerRadius="38dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
@@ -137,7 +134,7 @@
             android:text="@string/has_account"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            style="@style/RobotoGrayText" />
+            style="@style/roboto_gray_text" />
 
         <TextView
             android:id="@+id/logInTextView"
@@ -148,7 +145,7 @@
             android:text="@string/log_in"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/haveAccountTextView"
-            style="@style/RobotoLinkText" />
+            style="@style/roboto_link_text" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,25 +1,15 @@
 package com.example.mobile_hard_mad_lab1.fragments
 
 import android.annotation.SuppressLint
-import android.graphics.Insets
 import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.TextView
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.marginBottom
-import androidx.core.view.marginEnd
-import androidx.core.view.marginStart
-import androidx.core.view.marginTop
 import androidx.navigation.fragment.findNavController
-import com.example.mobile_hard_mad_lab1.ContinueMethodFragment
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentSignInBinding
@@ -45,11 +35,17 @@ class SignInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val signUpButton = binding.signUpTextView
         val navController = findNavController()
+        val signUpButton = binding.signUpTextView
+        val logInButton = binding.logInButton
 
         signUpButton.setOnClickListener {
             navController.navigate(R.id.signUpFragment)
+            marginIsFixed = false
+        }
+
+        logInButton.setOnClickListener {
+            navController.navigate(R.id.welcomeFragment)
             marginIsFixed = false
         }
     }
