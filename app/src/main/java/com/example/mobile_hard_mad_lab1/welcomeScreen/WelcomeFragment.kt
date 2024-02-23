@@ -1,4 +1,4 @@
-package com.example.mobile_hard_mad_lab1.fragments
+package com.example.mobile_hard_mad_lab1.welcomeScreen
 
 import android.os.Build
 import android.os.Bundle
@@ -6,18 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.findNavController
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
-import com.example.mobile_hard_mad_lab1.databinding.FragmentSignUpBinding
+import com.example.mobile_hard_mad_lab1.databinding.FragmentWelcomeBinding
 
-class SignUpFragment : Fragment() {
+class WelcomeFragment : Fragment() {
     private var marginIsFixed = false
-    private lateinit var binding : FragmentSignUpBinding
-    private val privacyPolicyMessage : String = "Тут будет политика конфидециальности"
+    private lateinit var binding : FragmentWelcomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,29 +25,20 @@ class SignUpFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentSignUpBinding.inflate(inflater, container, false)
-        parentFragmentManager.beginTransaction().replace(R.id.continue_method, ContinueMethodFragment()).commit()
-
+    ): View {
+        binding = FragmentWelcomeBinding.inflate(inflater, container, false)
         fixMargins(container)
 
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
         val navController = findNavController()
-        val privacyPolicy = binding.privacyPolicy
+
         val getStartedButton = binding.getStartedButton
 
-        privacyPolicy.setOnClickListener {
-            val toast = Toast.makeText(context, privacyPolicyMessage, Toast.LENGTH_SHORT)
-            toast.show()
-        }
-
         getStartedButton.setOnClickListener {
-            navController.navigate(R.id.welcomeFragment)
+            navController.navigate(R.id.chooseTopicFragment)
             marginIsFixed = false
         }
     }
@@ -60,12 +49,14 @@ class SignUpFragment : Fragment() {
         container?.setOnApplyWindowInsetsListener{v, insets ->
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 
-            val createAccountTextView = binding.createAccountTextView
+            val logoImageView = binding.logoImageView
             val getStartedButton = binding.getStartedButton
+            val hillBase = binding.hillBaseConstraintLayout
 
             if (!marginIsFixed) {
-                MarginFix.addTopMargin(createAccountTextView, systemInsets)
+                MarginFix.addTopMargin(logoImageView, systemInsets)
                 MarginFix.addBottomMargin(getStartedButton, systemInsets)
+                MarginFix.addBottomMargin(hillBase, systemInsets)
 
                 marginIsFixed = true
             }

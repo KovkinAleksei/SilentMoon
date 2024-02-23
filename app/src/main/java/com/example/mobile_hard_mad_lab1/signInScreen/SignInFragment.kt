@@ -1,4 +1,4 @@
-package com.example.mobile_hard_mad_lab1.fragments
+package com.example.mobile_hard_mad_lab1.signInScreen
 
 import android.annotation.SuppressLint
 import android.os.Build
@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentSignInBinding
+import com.example.mobile_hard_mad_lab1.common.fragments.ContinueMethodFragment
 
 
 class SignInFragment : Fragment() {

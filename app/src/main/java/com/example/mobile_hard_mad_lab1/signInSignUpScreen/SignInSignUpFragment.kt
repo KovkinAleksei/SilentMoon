@@ -1,4 +1,4 @@
-package com.example.mobile_hard_mad_lab1.fragments
+package com.example.mobile_hard_mad_lab1.signInSignUpScreen
 
 import android.annotation.SuppressLint
 import android.os.Build

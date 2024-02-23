@@ -16,4 +16,6 @@
     <color name="reduce_stress_bg_color">#8E97FD</color>
     <color name="light_gray">#EBEAEC</color>
     <color name="greeting_color">#FFECCC</color>
+    <color name="improve_performance_bg_color">#FA6E5A</color>
+    <color name="improve_performance_text_color">#FEF9F3</color>
 </resources>

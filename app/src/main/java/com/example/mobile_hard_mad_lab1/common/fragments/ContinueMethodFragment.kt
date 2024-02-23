@@ -1,4 +1,4 @@
-package com.example.mobile_hard_mad_lab1.fragments
+package com.example.mobile_hard_mad_lab1.common.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

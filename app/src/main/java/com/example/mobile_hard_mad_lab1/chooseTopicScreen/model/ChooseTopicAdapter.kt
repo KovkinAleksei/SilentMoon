@@ -1,16 +1,19 @@
-package com.example.mobile_hard_mad_lab1.Adapter
+package com.example.mobile_hard_mad_lab1.chooseTopicScreen.model
 
+import android.annotation.SuppressLint
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.graphics.drawable.toDrawable
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.databinding.TopicCardBinding
 
 class ChooseTopicAdapter(
-    private val topicsList: Array<String>
+    private val topicsList: Array<TopicCard>,
+    val onClick : () -> Unit
 ) : RecyclerView.Adapter<ChooseTopicAdapter.ChooseTopicViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChooseTopicViewHolder {
@@ -20,14 +23,18 @@ class ChooseTopicAdapter(
         return ChooseTopicViewHolder(binding)
     }
 
+    @SuppressLint("ResourceAsColor")
     override fun onBindViewHolder(holder: ChooseTopicViewHolder, position: Int) {
         val topicName = holder.itemView.findViewById<TextView>(R.id.topicName)
-        topicName.text = topicsList[position]
+        topicName.setTextColor(topicsList[position].textColor)
+        topicName.text = topicsList[position].name
 
         val topicBg = holder.itemView.findViewById<ImageView>(R.id.topicBg)
+        topicBg.setImageResource(topicsList[position].imageResource)
 
-        if (position % 2 != 0)
-            topicBg.setImageResource(R.drawable.improve_performance_bg)
+        holder.itemView.setOnClickListener {
+            onClick()
+        }
     }
 
     override fun getItemCount() = topicsList.size

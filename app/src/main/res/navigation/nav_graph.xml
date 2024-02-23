@@ -6,7 +6,7 @@
     app:startDestination="@id/signInSignUpFragment2">
     <fragment
         android:id="@+id/signInSignUpFragment2"
-        android:name="com.example.mobile_hard_mad_lab1.fragments.SignInSignUpFragment"
+        android:name="com.example.mobile_hard_mad_lab1.signInSignUpScreen.SignInSignUpFragment"
         android:label="fragment_sign_in_sign_up"
         tools:layout="@layout/fragment_sign_in_sign_up" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.mobile_hard_mad_lab1.fragments.SignInFragment"
+        android:name="com.example.mobile_hard_mad_lab1.signInScreen.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.mobile_hard_mad_lab1.fragments.SignUpFragment"
+        android:name="com.example.mobile_hard_mad_lab1.signUpScreen.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.example.mobile_hard_mad_lab1.fragments.WelcomeFragment"
+        android:name="com.example.mobile_hard_mad_lab1.welcomeScreen.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/chooseTopicFragment"
-        android:name="com.example.mobile_hard_mad_lab1.fragments.ChooseTopicFragment"
+        android:name="com.example.mobile_hard_mad_lab1.chooseTopicScreen.ChooseTopicFragment"
         android:label="fragment_choose_topic"
         tools:layout="@layout/fragment_choose_topic" />
 </navigation>
