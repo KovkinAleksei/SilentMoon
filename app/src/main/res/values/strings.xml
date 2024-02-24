@@ -33,4 +33,20 @@
     <string name="reduce_stress">Reduce Stress</string>
     <string name="reminders_question">What time would you\nlike to meditate?</string>
     <string name="recommend_time">Any time you can choose but We\nrecommend first thing in the morning.</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="ten">10</string>
+    <string name="eleven">11</string>
+    <string name="twelve">12</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="twenty_seven">27</string>
+    <string name="twenty_eight">28</string>
+    <string name="twenty_nine">29</string>
+    <string name="thirty">30</string>
+    <string name="thirty_one">31</string>
+    <string name="thirty_two">32</string>
+    <string name="thirty_three">33</string>
 </resources>
