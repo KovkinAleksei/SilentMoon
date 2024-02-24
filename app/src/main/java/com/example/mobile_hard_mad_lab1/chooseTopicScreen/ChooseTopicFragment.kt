@@ -35,7 +35,7 @@ class ChooseTopicFragment : Fragment() {
 
         val navController = findNavController()
         val onClick = {
-            navController.navigate(R.id.signInSignUpFragment2)
+            navController.navigate(R.id.remindersFragment)
             marginIsFixed = false
         }
 

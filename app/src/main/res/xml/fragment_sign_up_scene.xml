@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:layout_marginTop="24dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/createAccountTextView"
+            android:layout_marginTop="24dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_editor_absoluteY="376dp"
+            android:id="@+id/constraintLayout2"
+            motion:layout_constraintTop_toBottomOf="@+id/editText3"
+            android:layout_marginTop="5dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/createAccountTextView"
+            motion:layout_constraintBottom_toTopOf="@id/continue_method"
+            android:layout_marginBottom="24dp"
+            motion:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:layout_marginTop="39dp" />
+        <Constraint
+            android:layout_marginEnd="24dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="32dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:id="@+id/getStartedButton" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/constraintLayout2"
+            motion:layout_constraintBottom_toTopOf="@+id/getStartedButton"
+            android:layout_marginBottom="24dp" />
+        <Constraint
+            android:layout_marginEnd="24dp"
+            android:layout_height="63dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:id="@+id/editText3"
+            motion:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+            android:layout_marginBottom="24dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/editText2"
+            android:layout_marginTop="23dp"
+            motion:layout_constraintHorizontal_bias="0.99"
+            motion:layout_constraintBottom_toTopOf="@+id/editText3"
+            android:layout_marginBottom="24dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:id="@+id/email_input"
+            motion:layout_constraintBottom_toTopOf="@+id/editText2"
+            android:layout_marginBottom="24dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:id="@+id/textView2"
+            motion:layout_constraintBottom_toTopOf="@+id/email_input"
+            android:layout_marginBottom="24dp" />
+        <Constraint
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/continue_method"
+            motion:layout_constraintBottom_toTopOf="@id/textView2" />
+    </ConstraintSet>
+</MotionScene>

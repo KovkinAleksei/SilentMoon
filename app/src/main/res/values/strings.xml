@@ -31,4 +31,6 @@
     <string name="to_silent_moon_question">to Silent Moon?</string>
     <string name="choose_topic">choose a topic to focuse on:</string>
     <string name="reduce_stress">Reduce Stress</string>
+    <string name="reminders_question">What time would you\nlike to meditate?</string>
+    <string name="recommend_time">Any time you can choose but We\nrecommend first thing in the morning.</string>
 </resources>
