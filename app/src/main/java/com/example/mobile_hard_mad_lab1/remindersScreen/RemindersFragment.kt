@@ -39,9 +39,11 @@ class RemindersFragment : Fragment() {
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 
             val timeTextView = binding.timeTextView
+            val noThanksTextView = binding.noThanksTextView
 
             if (!marginIsFixed) {
                 MarginFix.addTopMargin(timeTextView, systemInsets)
+                MarginFix.addBottomMargin(noThanksTextView, systemInsets)
 
                 marginIsFixed = true
             }

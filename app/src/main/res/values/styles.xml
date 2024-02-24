@@ -106,4 +106,10 @@
         <item name="android:textColor">@color/time_picker_selected_color</item>
     </style>
 
+    <style name="textButton">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/almost_black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
 </resources>

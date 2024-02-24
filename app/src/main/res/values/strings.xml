@@ -49,4 +49,15 @@
     <string name="thirty_one">31</string>
     <string name="thirty_two">32</string>
     <string name="thirty_three">33</string>
+    <string name="day_question">Which day would you\nlike to meditate?</string>
+    <string name="day_recommend">Everyday is the best but we recommend picking at least five.</string>
+    <string name="sunday">SU</string>
+    <string name="saturday">S</string>
+    <string name="friday">F</string>
+    <string name="thursday">TH</string>
+    <string name="wednesday">W</string>
+    <string name="tuesday">T</string>
+    <string name="monday">M</string>
+    <string name="save">SAVE</string>
+    <string name="no_thanks">NO THANKS</string>
 </resources>
