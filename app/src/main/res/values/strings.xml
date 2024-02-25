@@ -60,4 +60,6 @@
     <string name="monday">M</string>
     <string name="save">SAVE</string>
     <string name="no_thanks">NO THANKS</string>
+    <string name="good_morning">Good Morning, Afsar</string>
+    <string name="have_a_good_day">We Wish you have a good day</string>
 </resources>

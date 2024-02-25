@@ -1,4 +1,4 @@
-package com.example.mobile_hard_mad_lab1.remindersScreen
+package com.example.mobile_hard_mad_lab1.homeScreen
 
 import android.os.Build
 import android.os.Bundle
@@ -8,14 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
-import androidx.navigation.fragment.findNavController
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
-import com.example.mobile_hard_mad_lab1.databinding.FragmentRemindersBinding
+import com.example.mobile_hard_mad_lab1.databinding.FragmentHomeBinding
 
-
-class RemindersFragment : Fragment() {
-    private lateinit var binding: FragmentRemindersBinding
+class HomeFragment : Fragment() {
+    private lateinit var binding : FragmentHomeBinding
     private var marginIsFixed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,22 +25,10 @@ class RemindersFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentRemindersBinding.inflate(inflater, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         fixMargins(container)
 
         return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val saveButton = binding.saveButton
-        val navController = findNavController()
-
-        saveButton.setOnClickListener {
-            navController.navigate(R.id.homeFragment)
-            marginIsFixed = false
-        }
     }
 
     // Выравнивание отступов относительно статус бара и системной навигационной панели
@@ -51,12 +37,10 @@ class RemindersFragment : Fragment() {
         container?.setOnApplyWindowInsetsListener{v, insets ->
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 
-            val timeTextView = binding.timeTextView
-            val noThanksTextView = binding.noThanksTextView
+            val logoImageView = binding.logoImageView
 
             if (!marginIsFixed) {
-                MarginFix.addTopMargin(timeTextView, systemInsets)
-                MarginFix.addBottomMargin(noThanksTextView, systemInsets)
+                MarginFix.addTopMargin(logoImageView, systemInsets)
 
                 marginIsFixed = true
             }
