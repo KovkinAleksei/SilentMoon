@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recommendationLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="186dp"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="113dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_shape_10"
+        android:backgroundTint="@color/focus_bg_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToOutline="true"
+        android:contentDescription="@null"
+        android:scaleType="fitEnd"
+        android:src="@drawable/focus_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/recommendationName"
+        style="@style/roboto_bold_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/focus"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/textView42"
+        style="@style/roboto_gray_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/meditation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recommendationName" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/dot"
+        app:layout_constraintBottom_toBottomOf="@+id/textView42"
+        app:layout_constraintStart_toEndOf="@+id/textView42"
+        app:layout_constraintTop_toTopOf="@+id/textView42" />
+
+    <TextView
+        android:id="@+id/textView43"
+        style="@style/roboto_gray_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/duration"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/recommendationName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,9 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentHomeBinding
+import com.example.mobile_hard_mad_lab1.homeScreen.model.HomeAdapter
 
 class HomeFragment : Fragment() {
     private lateinit var binding : FragmentHomeBinding
@@ -28,6 +31,18 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         fixMargins(container)
 
+        val recyclerView = binding.recyclerView
+        val viewManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+        val viewApapter = HomeAdapter(
+            arrayOf("Focus", "Happiness", "Focus")
+        )
+
+        recyclerView.apply {
+            layoutManager = viewManager
+            adapter = viewApapter
+        }
+
         return binding.root
     }
 
@@ -37,10 +52,12 @@ class HomeFragment : Fragment() {
         container?.setOnApplyWindowInsetsListener{v, insets ->
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 
-            val logoImageView = binding.logoImageView
+            val scrollView = binding.scrollView2
+            val bottomNavBar = binding.bottomNavBar
 
             if (!marginIsFixed) {
-                MarginFix.addTopMargin(logoImageView, systemInsets)
+                MarginFix.addTopMargin(scrollView, systemInsets)
+                MarginFix.addBottomMargin(bottomNavBar, systemInsets)
 
                 marginIsFixed = true
             }

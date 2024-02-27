@@ -62,4 +62,19 @@
     <string name="no_thanks">NO THANKS</string>
     <string name="good_morning">Good Morning, Afsar</string>
     <string name="have_a_good_day">We Wish you have a good day</string>
+    <string name="basics">Basics</string>
+    <string name="course">COURSE</string>
+    <string name="start">START</string>
+    <string name="duration">3–10 MIN</string>
+    <string name="relaxation">Relaxation</string>
+    <string name="music">MUSIC</string>
+    <string name="daily_thought">Daily Thought</string>
+    <string name="meditation">MEDITATION</string>
+    <string name="recommended_for_you">Recommended for you</string>
+    <string name="focus">Focus</string>
+    <string name="home">Home</string>
+    <string name="sleep">Sleep</string>
+    <string name="meditate">Meditate</string>
+    <string name="music_nav_bar">Music</string>
+    <string name="afsar_capital">Afsar</string>
 </resources>
