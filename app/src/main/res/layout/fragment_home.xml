@@ -370,9 +370,9 @@
         android:layout_marginStart="20dp"
         android:background="@drawable/rounded_shape_20"
         android:backgroundTint="@color/blue"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/bottomNavBar" />
 
     <ImageView
         android:id="@+id/imageView17"
@@ -392,7 +392,8 @@
         android:layout_marginBottom="44dp"
         android:contentDescription="@null"
         android:src="@drawable/meditate"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomNavBar"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@+id/bottomNavBar"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -401,20 +402,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="@null"
         android:src="@drawable/person"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomNavBar"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/imageView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="@null"
         android:src="@drawable/music"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomNavBar"
         app:layout_constraintEnd_toStartOf="@+id/imageView15"
         app:layout_constraintStart_toEndOf="@+id/imageView16" />
 
@@ -422,10 +423,10 @@
         android:id="@+id/imageView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="@null"
         android:src="@drawable/sleep"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomNavBar"
         app:layout_constraintEnd_toStartOf="@+id/imageView16"
         app:layout_constraintStart_toEndOf="@+id/view4" />
 
