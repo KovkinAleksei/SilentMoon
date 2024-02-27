@@ -14,10 +14,12 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentHomeBinding
 import com.example.mobile_hard_mad_lab1.homeScreen.model.HomeAdapter
+import com.example.mobile_hard_mad_lab1.homeScreen.service.RecommendatoinsService
 
 class HomeFragment : Fragment() {
     private lateinit var binding : FragmentHomeBinding
     private var marginIsFixed = false
+    private val recommendationService = RecommendatoinsService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,9 +36,7 @@ class HomeFragment : Fragment() {
         val recyclerView = binding.recyclerView
         val viewManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-        val viewApapter = HomeAdapter(
-            arrayOf("Focus", "Happiness", "Focus")
-        )
+        val viewApapter = HomeAdapter(recommendationService.generateRecommendations())
 
         recyclerView.apply {
             layoutManager = viewManager
