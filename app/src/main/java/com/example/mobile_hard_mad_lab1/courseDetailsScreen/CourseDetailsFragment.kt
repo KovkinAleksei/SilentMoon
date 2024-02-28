@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
 import com.example.mobile_hard_mad_lab1.R
+import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentCourseDetailsBinding
 
 class CourseDetailsFragment : Fragment() {
@@ -39,6 +40,7 @@ class CourseDetailsFragment : Fragment() {
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 
             if (!marginIsFixed) {
+
                 marginIsFixed = true
             }
 
