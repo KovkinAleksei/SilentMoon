@@ -145,7 +145,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButton"
+                android:id="@+id/basicsCourseButton"
                 style="@style/card_light_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -161,9 +161,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/duration"
-                app:layout_constraintBottom_toBottomOf="@+id/materialButton"
+                app:layout_constraintBottom_toBottomOf="@+id/basicsCourseButton"
                 app:layout_constraintStart_toStartOf="@+id/view"
-                app:layout_constraintTop_toTopOf="@+id/materialButton" />
+                app:layout_constraintTop_toTopOf="@+id/basicsCourseButton" />
 
             <!--Верхняя правая карточка-->
             <View
@@ -222,7 +222,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView35" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButton2"
+                android:id="@+id/relaxationMusicButton"
                 style="@style/card_dark_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -239,9 +239,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:text="@string/duration"
-                app:layout_constraintBottom_toBottomOf="@+id/materialButton2"
+                app:layout_constraintBottom_toBottomOf="@+id/relaxationMusicButton"
                 app:layout_constraintStart_toStartOf="@+id/view2"
-                app:layout_constraintTop_toTopOf="@+id/materialButton2" />
+                app:layout_constraintTop_toTopOf="@+id/relaxationMusicButton" />
 
             <!--Daily Thought-->
             <ImageView
@@ -355,13 +355,14 @@
     </ScrollView>
 
     <ImageView
+        android:id="@+id/imageView20"
         android:layout_width="match_parent"
         android:layout_height="24dp"
+        android:contentDescription="@null"
         android:src="@drawable/shadow"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@null" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/bottomNavBar"
@@ -438,54 +439,51 @@
         app:layout_constraintStart_toEndOf="@+id/view4" />
 
     <TextView
+        android:id="@+id/textView44"
+        style="@style/nav_bar_selected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         android:text="@string/home"
         app:layout_constraintEnd_toEndOf="@+id/view4"
         app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toBottomOf="@+id/view4"
-        style="@style/nav_bar_selected" />
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
 
     <TextView
         android:id="@+id/textView41"
         style="@style/nav_bar_unselected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:text="@string/sleep"
         app:layout_constraintEnd_toEndOf="@+id/imageView18"
         app:layout_constraintStart_toStartOf="@+id/imageView18"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+        app:layout_constraintTop_toTopOf="@+id/textView44" />
 
     <TextView
         style="@style/nav_bar_unselected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:text="@string/meditate"
         app:layout_constraintEnd_toEndOf="@+id/imageView16"
         app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+        app:layout_constraintTop_toTopOf="@+id/textView44" />
 
     <TextView
         style="@style/nav_bar_unselected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:text="@string/music_nav_bar"
         app:layout_constraintEnd_toEndOf="@+id/imageView19"
         app:layout_constraintStart_toStartOf="@+id/imageView19"
-        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+        app:layout_constraintTop_toTopOf="@+id/textView44" />
 
     <TextView
         style="@style/nav_bar_unselected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:text="@string/afsar_capital"
         app:layout_constraintEnd_toEndOf="@+id/imageView15"
         app:layout_constraintStart_toStartOf="@+id/imageView15"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+        app:layout_constraintTop_toTopOf="@+id/textView44" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

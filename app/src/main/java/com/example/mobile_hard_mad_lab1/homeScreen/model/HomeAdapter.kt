@@ -1,6 +1,5 @@
 package com.example.mobile_hard_mad_lab1.homeScreen.model
 
-import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,8 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.databinding.RecommendationCardBinding
 
 class HomeAdapter(
-    private val recommendations: Array<RecommendationCard>
+    private val recommendations: Array<RecommendationCard>,
+    private val onCardClick: () -> Unit
 ) : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
     override fun getItemCount() = recommendations.size
@@ -30,9 +30,11 @@ class HomeAdapter(
         val bgImage = holder.itemView.findViewById<ImageView>(R.id.backgroundImageView)
         bgImage.setImageResource(recommendations[position].imageResource)
 
-        /*val bgColor = holder.itemView.findViewById<View>(R.id.recommendationBg)
-        bgColor.setBackgroundColor(recommendations[position].bgColor)*/
+        val recommendationBg = holder.itemView.findViewById<View>(R.id.recommendationBg)
 
+        recommendationBg.setOnClickListener {
+            onCardClick()
+        }
     }
 
     class HomeViewHolder(binding: RecommendationCardBinding) : RecyclerView.ViewHolder(binding.root)

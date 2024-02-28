@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentHomeBinding
@@ -36,14 +36,41 @@ class HomeFragment : Fragment() {
         val recyclerView = binding.recyclerView
         val viewManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-        val viewApapter = HomeAdapter(recommendationService.generateRecommendations())
+        val navController = findNavController()
+        val onRecommendationClick = {
+            navController.navigate(R.id.courseDetailsFragment)
+            marginIsFixed = false
+        }
+
+        val viewAdapter = HomeAdapter(
+            recommendations = recommendationService.generateRecommendations(),
+            onCardClick = onRecommendationClick
+        )
 
         recyclerView.apply {
             layoutManager = viewManager
-            adapter = viewApapter
+            adapter = viewAdapter
         }
 
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val navController = findNavController()
+        val basicsCourse = binding.basicsCourseButton
+        val relaxationMusic = binding.relaxationMusicButton
+
+        basicsCourse.setOnClickListener {
+            navController.navigate(R.id.courseDetailsFragment)
+            marginIsFixed = false
+        }
+
+        relaxationMusic.setOnClickListener {
+            navController.navigate(R.id.courseDetailsFragment)
+            marginIsFixed = false
+        }
     }
 
     // Выравнивание отступов относительно статус бара и системной навигационной панели
