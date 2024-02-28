@@ -9,7 +9,7 @@
     <!--What brings you to Silent Moon?-->
     <TextView
         android:id="@+id/questionTextView"
-        style="@style/header_text"
+        style="@style/roboto_bold_black_28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/textView7"
-        style="@style/header_text"
+        style="@style/roboto_bold_black_28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -32,7 +32,7 @@
     <!--Choose a topic to focus on-->
     <TextView
         android:id="@+id/textView8"
-        style="@style/gray_subtitle"
+        style="@style/roboto_gray_20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"

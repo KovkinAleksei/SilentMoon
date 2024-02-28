@@ -31,34 +31,86 @@
     </style>
 
     <!--Основной шрифт приложения-->
-    <style name="roboto_text">
+    <style name="roboto_14">
+        <item name="fontFamily">@font/roboto</item>
         <item name="android:letterSpacing">0.05</item>
         <item name="android:textSize">14sp</item>
     </style>
+    
+    <style name="roboto_20">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/almost_black</item>
+    </style>
+    
+    <style name="roboto_blue_16" parent="roboto_14">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 
-    <style name="roboto_gray_text" parent="roboto_text">
+    <style name="roboto_gray_16_spacing" parent="roboto_blue_16">
         <item name="android:textColor">@color/gray</item>
     </style>
 
-    <style name="gray_subtitle" parent = "roboto_gray_text">
+    <style name="roboto_gray_14" parent="roboto_14">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="roboto_gray_20" parent = "roboto_gray_14">
         <item name="android:letterSpacing">0.0</item>
         <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="no_spacing_gray_text" parent = "roboto_gray_text">
+    <style name="roboto_gray_16_nospacing" parent = "roboto_gray_14">
         <item name="android:letterSpacing">0.0</item>
         <item name="android:textSize">16sp</item>
         <item name="android:lineSpacingExtra">8dp</item>
     </style>
 
-    <style name="roboto_link_text" parent="roboto_text">
+    <style name="roboto_blue_14" parent="roboto_14">
         <item name="android:clickable">true</item>
         <item name="android:textColor">@color/blue</item>
     </style>
 
-    <style name="explore_app_text" parent="@style/roboto_text">
+    <style name="roboto_lightgray_16" parent="@style/roboto_14">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/light_gray</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="roboto_medium_16">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/almost_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="roboto_medium_gray_11" parent="roboto_medium_16">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="roboto_bold_black_28">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/almost_black</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="roboto_bold_black_34" parent="roboto_bold_black_28">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="roboto_bold_black_30" parent = "@style/roboto_bold_black_28">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="roboto_bold_black_24" parent = "@style/roboto_bold_black_28">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="roboto_bold_gold_30" parent = "@style/roboto_bold_black_30">
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:letterSpacing">0.01</item>
         <item name="android:textAlignment">center</item>
     </style>
 
@@ -91,48 +143,33 @@
     </style>
 
     <!--Заголовки экранов-->
-    <style name="header_text">
-        <item name="android:fontFamily">@font/roboto_bold</item>
-        <item name="android:textColor">@color/almost_black</item>
-        <item name="android:textSize">28sp</item>
-    </style>
-
-    <style name="bigger_header_text" parent = "@style/header_text">
-        <item name="android:textSize">30sp</item>
-    </style>
-
-    <style name="smaller_header_text" parent = "@style/header_text">
-        <item name="android:textSize">24sp</item>
-    </style>
-
-    <style name="greeting_text" parent = "@style/bigger_header_text">
-        <item name="android:textColor">@color/gold</item>
-        <item name="android:letterSpacing">0.01</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-
-    <style name="helvetica_header">
+    <style name="helvetica_medium_18">
         <item name="android:fontFamily">@font/helvetica_neue_medium</item>
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="helvetica_bold_header" parent="helvetica_header">
+    <style name="helvetica_bold_18" parent="helvetica_medium_18">
         <item name="fontFamily">@font/helvetica_neueue_bold</item>
     </style>
 
-    <style name="helvetica_text" parent="helvetica_header">
+    <style name="helvetica_medium_11" parent="helvetica_medium_18">
         <item name="android:textSize">11sp</item>
     </style>
 
-    <style name="helvetica_gold_header" parent="helvetica_header">
+    <style name="helvetica_medium_gray_14" parent="helvetica_medium_18">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="helvetica_medium_gold_18" parent="helvetica_medium_18">
         <item name="android:textColor">@color/gold</item>
     </style>
 
-    <style name="helvetica_gold_text" parent="helvetica_gold_header">
+    <style name="helvetica_medium_gold_11" parent="helvetica_medium_gold_18">
         <item name="android:textSize">11sp</item>
     </style>
 
-    <style name="helvetica_gray_text" parent="helvetica_text">
+    <style name="helvetica_medium_lightgray_11" parent="helvetica_medium_11">
         <item name="android:textColor">@color/light_gray</item>
     </style>
 
@@ -167,10 +204,15 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="roboto_gray_bold" parent="roboto_white_bold">
+    <style name="roboto_gray_medium" parent="roboto_white_bold">
         <item name="android:textColor">@color/gray</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
     </style>
 
+    <style name="roboto_regular_size_gray" parent="roboto_gray_14">
+        <item name="android:textSize">14sp</item>
+    </style>
+    
     <style name="roboto_medium_header">
         <item name="android:fontFamily">@font/roboto_medium</item>
         <item name="android:textColor">@color/almost_black</item>

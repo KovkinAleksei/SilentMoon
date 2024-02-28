@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/header_text" />
+        style="@style/roboto_bold_black_28" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/continue_method"
@@ -43,7 +43,7 @@
     <!--Or log in with email-->
     <TextView
         android:id="@+id/textView"
-        style="@style/roboto_gray_text"
+        style="@style/roboto_gray_14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -122,7 +122,7 @@
             android:text="@string/has_account"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            style="@style/roboto_gray_text" />
+            style="@style/roboto_gray_14" />
 
         <TextView
             android:id="@+id/signUpTextView"
@@ -133,7 +133,7 @@
             android:text="@string/sign_up"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/haveAccountTextView"
-            style="@style/roboto_link_text" />
+            style="@style/roboto_blue_14" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

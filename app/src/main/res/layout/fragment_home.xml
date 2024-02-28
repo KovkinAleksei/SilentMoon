@@ -58,7 +58,7 @@
             <!--Good morning-->
             <TextView
                 android:id="@+id/textView31"
-                style="@style/header_text"
+                style="@style/roboto_bold_black_28"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -69,7 +69,7 @@
 
             <TextView
                 android:id="@+id/textView32"
-                style="@style/gray_subtitle"
+                style="@style/roboto_gray_20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -126,7 +126,7 @@
 
             <TextView
                 android:id="@+id/textView33"
-                style="@style/helvetica_gold_header"
+                style="@style/helvetica_medium_gold_18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/basics"
@@ -135,7 +135,7 @@
 
             <TextView
                 android:id="@+id/textView34"
-                style="@style/helvetica_gold_text"
+                style="@style/helvetica_medium_gold_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -156,7 +156,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/view" />
 
             <TextView
-                style="@style/helvetica_gray_text"
+                style="@style/helvetica_medium_lightgray_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -202,7 +202,7 @@
 
             <TextView
                 android:id="@+id/textView35"
-                style="@style/helvetica_bold_header"
+                style="@style/helvetica_bold_18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/relaxation"
@@ -211,7 +211,7 @@
 
             <TextView
                 android:id="@+id/textView36"
-                style="@style/helvetica_text"
+                style="@style/helvetica_medium_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -234,7 +234,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/view2" />
 
             <TextView
-                style="@style/helvetica_text"
+                style="@style/helvetica_medium_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"

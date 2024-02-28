@@ -92,7 +92,7 @@
     <!--Приветствие-->
     <TextView
         android:id="@+id/textView4"
-        style="@style/greeting_text"
+        style="@style/roboto_bold_gold_30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -103,7 +103,7 @@
 
     <TextView
         android:id="@+id/textView5"
-        style="@style/greeting_text"
+        style="@style/roboto_bold_gold_30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto"
@@ -114,7 +114,7 @@
 
     <!--Описание-->
     <TextView
-        style="@style/explore_app_text"
+        style="@style/roboto_lightgray_16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"

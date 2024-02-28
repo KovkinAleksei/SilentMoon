@@ -43,7 +43,7 @@
 
     <TextView
         android:id="@+id/textView42"
-        style="@style/roboto_gray_bold"
+        style="@style/roboto_gray_medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
@@ -63,7 +63,7 @@
 
     <TextView
         android:id="@+id/textView43"
-        style="@style/roboto_gray_bold"
+        style="@style/roboto_gray_medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"

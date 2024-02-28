@@ -19,6 +19,8 @@
     <color name="hill_color">#8C96FF</color>
     <color name="reduce_stress_bg_color">#8E97FD</color>
     <color name="light_gray">#EBEAEC</color>
+    <color name="voice_choice_divider_color">#E4E6FD</color>
+    <color name="audio_divider_color">#ADB8D9</color>
     <color name="shadow_color">#F2F2F2</color>
     <color name="divider_color">#E1E1E5</color>
     <color name="gold">#FFECCC</color>

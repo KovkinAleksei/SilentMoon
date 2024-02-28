@@ -22,7 +22,7 @@
     <!--Create your account-->
     <TextView
         android:id="@+id/createAccountTextView"
-        style="@style/header_text"
+        style="@style/roboto_bold_black_28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -42,7 +42,7 @@
     <!--Or sign up with email-->
     <TextView
         android:id="@+id/textView2"
-        style="@style/roboto_gray_text"
+        style="@style/roboto_gray_14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -137,7 +137,7 @@
 
         <TextView
             android:id="@+id/textView3"
-            style="@style/roboto_gray_text"
+            style="@style/roboto_gray_14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/i_have_read"
@@ -147,7 +147,7 @@
 
         <TextView
             android:id="@+id/privacyPolicy"
-            style="@style/roboto_link_text"
+            style="@style/roboto_blue_14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"

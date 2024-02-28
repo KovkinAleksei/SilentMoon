@@ -8,8 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.mobile_hard_mad_lab1.R
+import com.example.mobile_hard_mad_lab1.chooseTopicScreen.model.ChooseTopicAdapter
 import com.example.mobile_hard_mad_lab1.common.MarginFix
+import com.example.mobile_hard_mad_lab1.courseDetailsScreen.model.AudioAdapter
 import com.example.mobile_hard_mad_lab1.databinding.FragmentCourseDetailsBinding
 
 class CourseDetailsFragment : Fragment() {
@@ -29,8 +33,25 @@ class CourseDetailsFragment : Fragment() {
 
         fixMargins(container)
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_course_details, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val recyclerView = binding.audioRecyclerView
+        val viewManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+
+        val viewAdapter = AudioAdapter(
+            arrayOf("Focus Attention", "Body Scan", "Making Happiness", "Focus Attention",
+                "Focus Attention", "Body Scan", "Making Happiness", "Focus Attention",
+                "Focus Attention", "Body Scan", "Making Happiness", "Focus Attention")
+        )
+
+        recyclerView.apply {
+            layoutManager = viewManager
+            adapter = viewAdapter
+        }
     }
 
     // Выравнивание отступов относительно статус бара и системной навигационной панели

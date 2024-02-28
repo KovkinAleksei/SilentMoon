@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="@string/slogan"
-        style="@style/bigger_header_text"
+        style="@style/roboto_bold_black_30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/introduceImageView" />
@@ -134,7 +134,7 @@
             android:text="@string/has_account"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            style="@style/roboto_gray_text" />
+            style="@style/roboto_gray_14" />
 
         <TextView
             android:id="@+id/logInTextView"
@@ -145,7 +145,7 @@
             android:text="@string/log_in"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/haveAccountTextView"
-            style="@style/roboto_link_text" />
+            style="@style/roboto_blue_14" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
