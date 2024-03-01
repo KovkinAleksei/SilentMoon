@@ -57,8 +57,10 @@ class CourseDetailsFragment : Fragment() {
     private fun fixMargins(container: ViewGroup?) {
         container?.setOnApplyWindowInsetsListener{v, insets ->
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val coordinatorLayout = binding.coordinatorLayout
 
             if (!marginIsFixed) {
+                MarginFix.addBottomMargin(coordinatorLayout, systemInsets)
 
                 marginIsFixed = true
             }
