@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
+import com.example.mobile_hard_mad_lab1.common.fragments.TabBarFragment
 import com.example.mobile_hard_mad_lab1.databinding.FragmentMeditateBinding
 import com.example.mobile_hard_mad_lab1.meditateScreen.model.CategoryAdapter
 import com.example.mobile_hard_mad_lab1.meditateScreen.service.CategoryService
@@ -17,7 +19,6 @@ import com.example.mobile_hard_mad_lab1.meditateScreen.service.CategoryService
 
 class MeditateFragment : Fragment() {
     private lateinit var binding: FragmentMeditateBinding
-    private var marginIsFixed = false
     private val categoryService = CategoryService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +42,10 @@ class MeditateFragment : Fragment() {
             adapter = viewAdapter
         }
 
+        // Добавление Tab Bar в разметку
+        val tabBarFragment = TabBarFragment.newInstance(R.id.meditateFragment)
+        parentFragmentManager.beginTransaction().replace(R.id.tabBarLayout, tabBarFragment).commit()
+
         return binding.root
     }
 
@@ -51,12 +56,7 @@ class MeditateFragment : Fragment() {
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 
             val meditateTextView = binding.meditateTextView
-
-            if (!marginIsFixed) {
-                MarginFix.addTopMargin(meditateTextView, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addTopMargin(meditateTextView, systemInsets)
 
             insets
         }

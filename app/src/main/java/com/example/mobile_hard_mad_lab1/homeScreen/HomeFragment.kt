@@ -12,7 +12,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
+import com.example.mobile_hard_mad_lab1.common.fragments.ContinueMethodFragment
+import com.example.mobile_hard_mad_lab1.common.fragments.TabBarFragment
 import com.example.mobile_hard_mad_lab1.databinding.FragmentHomeBinding
+import com.example.mobile_hard_mad_lab1.databinding.FragmentTabBarBinding
 import com.example.mobile_hard_mad_lab1.homeScreen.model.HomeAdapter
 import com.example.mobile_hard_mad_lab1.homeScreen.service.RecommendatoinsService
 
@@ -53,13 +56,8 @@ class HomeFragment : Fragment() {
             adapter = viewAdapter
         }
 
-        // Навигация на Tab Bar
-        val meditateTabBar = binding.meditateTabBar
-
-        meditateTabBar.setOnClickListener {
-            navController.navigate(R.id.meditateFragment)
-            marginIsFixed = false
-        }
+        // Добавление Tab Bar в разметку
+        parentFragmentManager.beginTransaction().replace(R.id.tabBarLayout, TabBarFragment()).commit()
 
         return binding.root
     }
@@ -89,14 +87,7 @@ class HomeFragment : Fragment() {
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 
             val scrollView = binding.scrollView2
-            val bottomNavBar = binding.bottomNavBar
-
-            if (!marginIsFixed) {
-                MarginFix.addTopMargin(scrollView, systemInsets)
-                MarginFix.addBottomMargin(bottomNavBar, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addTopMargin(scrollView, systemInsets)
 
             insets
         }
