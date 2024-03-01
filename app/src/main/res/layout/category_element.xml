@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/categoryConstraintLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="20dp">
+
+    <View
+        android:id="@+id/categoryBg"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/rounded_shape_25"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/categoryIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/category_all_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryBg"
+        app:layout_constraintEnd_toEndOf="@+id/categoryBg"
+        app:layout_constraintStart_toStartOf="@+id/categoryBg"
+        app:layout_constraintTop_toTopOf="@+id/categoryBg"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/categoryNameTextView"
+        style="@style/helvetica_medium_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/all"
+        app:layout_constraintEnd_toEndOf="@+id/categoryBg"
+        app:layout_constraintStart_toStartOf="@+id/categoryBg"
+        app:layout_constraintTop_toBottomOf="@+id/categoryBg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

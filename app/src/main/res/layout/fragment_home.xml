@@ -393,8 +393,17 @@
         app:layout_constraintStart_toStartOf="@+id/view4"
         app:layout_constraintTop_toTopOf="@+id/view4" />
 
+    <View
+        android:id="@+id/meditateTabBar"
+        android:layout_width="46dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/bottomNavBar"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNavBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
     <ImageView
-        android:id="@+id/imageView16"
+        android:id="@+id/meditateTabBarImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
@@ -404,6 +413,16 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@+id/bottomNavBar"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/meditateTabBarText"
+        style="@style/nav_bar_unselected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meditate"
+        app:layout_constraintEnd_toEndOf="@+id/meditateTabBarImage"
+        app:layout_constraintStart_toStartOf="@+id/meditateTabBarImage"
+        app:layout_constraintTop_toTopOf="@+id/textView44" />
 
     <ImageView
         android:id="@+id/imageView15"
@@ -425,7 +444,7 @@
         android:src="@drawable/music"
         app:layout_constraintTop_toTopOf="@id/bottomNavBar"
         app:layout_constraintEnd_toStartOf="@+id/imageView15"
-        app:layout_constraintStart_toEndOf="@+id/imageView16" />
+        app:layout_constraintStart_toEndOf="@+id/meditateTabBarImage" />
 
     <ImageView
         android:id="@+id/imageView18"
@@ -435,7 +454,7 @@
         android:contentDescription="@null"
         android:src="@drawable/sleep"
         app:layout_constraintTop_toTopOf="@id/bottomNavBar"
-        app:layout_constraintEnd_toStartOf="@+id/imageView16"
+        app:layout_constraintEnd_toStartOf="@+id/meditateTabBarImage"
         app:layout_constraintStart_toEndOf="@+id/view4" />
 
     <TextView
@@ -457,15 +476,6 @@
         android:text="@string/sleep"
         app:layout_constraintEnd_toEndOf="@+id/imageView18"
         app:layout_constraintStart_toStartOf="@+id/imageView18"
-        app:layout_constraintTop_toTopOf="@+id/textView44" />
-
-    <TextView
-        style="@style/nav_bar_unselected"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/meditate"
-        app:layout_constraintEnd_toEndOf="@+id/imageView16"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
         app:layout_constraintTop_toTopOf="@+id/textView44" />
 
     <TextView

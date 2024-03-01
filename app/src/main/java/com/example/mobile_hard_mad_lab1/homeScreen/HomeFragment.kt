@@ -33,6 +33,7 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         fixMargins(container)
 
+        // Recycler View с рекомменациями
         val recyclerView = binding.recyclerView
         val viewManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
@@ -50,6 +51,14 @@ class HomeFragment : Fragment() {
         recyclerView.apply {
             layoutManager = viewManager
             adapter = viewAdapter
+        }
+
+        // Навигация на Tab Bar
+        val meditateTabBar = binding.meditateTabBar
+
+        meditateTabBar.setOnClickListener {
+            navController.navigate(R.id.meditateFragment)
+            marginIsFixed = false
         }
 
         return binding.root

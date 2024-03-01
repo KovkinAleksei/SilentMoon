@@ -69,10 +69,18 @@
         <action
             android:id="@+id/action_homeFragment_to_courseDetailsFragment"
             app:destination="@id/courseDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_meditateFragment"
+            app:destination="@id/meditateFragment" />
     </fragment>
     <fragment
         android:id="@+id/courseDetailsFragment"
         android:name="com.example.mobile_hard_mad_lab1.courseDetailsScreen.CourseDetailsFragment"
         android:label="fragment_course_details"
         tools:layout="@layout/fragment_course_details" />
+    <fragment
+        android:id="@+id/meditateFragment"
+        android:name="com.example.mobile_hard_mad_lab1.meditateScreen.MeditateFragment"
+        android:label="fragment_meditate"
+        tools:layout="@layout/fragment_meditate" />
 </navigation>

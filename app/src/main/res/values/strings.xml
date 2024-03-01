@@ -86,4 +86,9 @@
     <string name="female_voice">FEMALE VOICE</string>
     <string name="focus_attention">Focus Attention</string>
     <string name="audio_duration_example">10 MIN</string>
+    <string name="we_can_recognize">we can learn how to recognize when our minds are doing their normal everyday acrobatics.</string>
+    <string name="all">All</string>
+    <string name="daily_calm">Daily Calm</string>
+    <string name="apr">APR 30</string>
+    <string name="pause_practice">PAUSE PRACTICE</string>
 </resources>
