@@ -71,7 +71,9 @@
             app:destination="@id/courseDetailsFragment" />
         <action
             android:id="@+id/action_homeFragment_to_meditateFragment"
-            app:destination="@id/meditateFragment" />
+            app:destination="@id/meditateFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false"/>
     </fragment>
     <fragment
         android:id="@+id/courseDetailsFragment"
@@ -82,5 +84,11 @@
         android:id="@+id/meditateFragment"
         android:name="com.example.mobile_hard_mad_lab1.meditateScreen.MeditateFragment"
         android:label="fragment_meditate"
-        tools:layout="@layout/fragment_meditate" />
+        tools:layout="@layout/fragment_meditate" >
+        <action
+            android:id="@+id/action_meditateFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/meditateFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
 </navigation>

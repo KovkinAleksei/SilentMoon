@@ -46,7 +46,7 @@ class TabBarFragment : Fragment() {
 
         if (arguments?.getInt(SELECTED_SCREEN) != R.id.meditateFragment)
             meditateButton.setOnClickListener {
-                navController.navigate(R.id.meditateFragment)
+                navController.navigate(R.id.action_homeFragment_to_meditateFragment)
                 marginIsFixed = false
             }
         else if (arguments?.getInt(SELECTED_SCREEN) != R.id.homeFragment) {
@@ -71,7 +71,7 @@ class TabBarFragment : Fragment() {
             val homeTabBarButton = binding.homeTabBar
 
             homeTabBarButton.setOnClickListener {
-                navController.navigate(R.id.homeFragment)
+                navController.navigate(R.id.action_meditateFragment_to_homeFragment)
                 marginIsFixed = false
             }
         }
