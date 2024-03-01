@@ -14,11 +14,13 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.chooseTopicScreen.model.ChooseTopicAdapter
 import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.courseDetailsScreen.model.AudioAdapter
+import com.example.mobile_hard_mad_lab1.courseDetailsScreen.service.AudioService
 import com.example.mobile_hard_mad_lab1.databinding.FragmentCourseDetailsBinding
 
 class CourseDetailsFragment : Fragment() {
     private lateinit var binding : FragmentCourseDetailsBinding
     private var marginIsFixed = false
+    private val audioService = AudioService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,11 +44,7 @@ class CourseDetailsFragment : Fragment() {
         val recyclerView = binding.audioRecyclerView
         val viewManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-        val viewAdapter = AudioAdapter(
-            arrayOf("Focus Attention", "Body Scan", "Making Happiness", "Focus Attention",
-                "Focus Attention", "Body Scan", "Making Happiness", "Focus Attention",
-                "Focus Attention", "Body Scan", "Making Happiness", "Focus Attention")
-        )
+        val viewAdapter = AudioAdapter(audioService.generateAudioArray())
 
         recyclerView.apply {
             layoutManager = viewManager
