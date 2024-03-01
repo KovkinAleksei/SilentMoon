@@ -6,135 +6,168 @@
     android:layout_height="match_parent"
     tools:context=".meditateScreen.MeditateFragment">
 
-    <!--Заголовок экрана-->
-    <TextView
-        android:id="@+id/meditateTextView"
-        style="@style/roboto_bold_black_28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:text="@string/meditate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView52"
-        style="@style/roboto_gray_16_nospacing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:paddingHorizontal="40dp"
-        android:text="@string/we_can_recognize"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/meditateTextView" />
-
-    <!-- Список категорий-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:overScrollMode="never"
-        android:id="@+id/category_recycler_view"
+    <ScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView52" />
-
-    <!--Daily Calm-->
-    <View
-        android:id="@+id/view6"
-        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/rounded_shape_10"
-        android:backgroundTint="@color/meditate_daily_calm_bg_color"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
-        app:layout_constraintEnd_toEndOf="@+id/imageView16"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toTopOf="@+id/imageView16" />
-
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="match_parent"
-        android:scaleType="fitXY"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/rounded_shape_10"
-        android:clipToOutline="true"
-        android:contentDescription="@null"
-        android:src="@drawable/meditate_daily_calm"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/category_recycler_view"
-        tools:ignore="UnusedAttribute" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tabBarLayout">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        android:src="@drawable/meditate_daily_calm_play"
-        app:layout_constraintBottom_toBottomOf="@+id/view6"
-        app:layout_constraintEnd_toEndOf="@+id/view6"
-        app:layout_constraintTop_toTopOf="@+id/view6"
-        android:contentDescription="@null" />
+            <!--Заголовок экрана-->
+            <TextView
+                android:id="@+id/meditateTextView"
+                style="@style/roboto_bold_black_28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:text="@string/meditate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/flow8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:orientation="vertical"
-        app:constraint_referenced_ids="textView54,textView53"
-        app:layout_constraintBottom_toBottomOf="@+id/view6"
-        app:layout_constraintStart_toStartOf="@+id/view6"
-        app:layout_constraintTop_toTopOf="@+id/view6" />
+            <TextView
+                android:id="@+id/textView52"
+                style="@style/roboto_gray_16_nospacing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="40dp"
+                android:text="@string/we_can_recognize"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meditateTextView" />
 
-    <TextView
-        android:id="@+id/textView54"
-        style="@style/helvetica_bold_18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/daily_calm"
-        app:layout_constraintStart_toStartOf="@+id/flow8"
-        app:layout_constraintTop_toTopOf="@+id/flow8" />
+            <!-- Список категорий-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:overScrollMode="never"
+                android:id="@+id/category_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView52" />
 
-    <TextView
-        android:id="@+id/textView53"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        style="@style/helvetica_medium_dark_gray_11"
-        android:text="@string/apr"
-        app:layout_constraintBottom_toBottomOf="@+id/flow8"
-        app:layout_constraintStart_toStartOf="@+id/flow8"
-        app:layout_constraintTop_toBottomOf="@+id/textView54" />
+            <!--Daily Calm-->
+            <View
+                android:id="@+id/view6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/rounded_shape_10"
+                android:backgroundTint="@color/meditate_daily_calm_bg_color"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                app:layout_constraintEnd_toEndOf="@+id/imageView16"
+                app:layout_constraintStart_toStartOf="@+id/imageView16"
+                app:layout_constraintTop_toTopOf="@+id/imageView16" />
 
-    <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="3dp"
-        android:layout_height="3dp"
-        android:layout_marginStart="5dp"
-        android:contentDescription="@null"
-        android:scaleType="fitXY"
-        android:src="@drawable/dark_gray_dot"
-        app:layout_constraintBottom_toBottomOf="@+id/textView53"
-        app:layout_constraintStart_toEndOf="@+id/textView53"
-        app:layout_constraintTop_toTopOf="@+id/textView53" />
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rounded_shape_10"
+                android:clipToOutline="true"
+                android:contentDescription="@null"
+                android:src="@drawable/meditate_daily_calm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/category_recycler_view"
+                tools:ignore="UnusedAttribute" />
 
-    <TextView
-        android:id="@+id/textView56"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        style="@style/helvetica_medium_dark_gray_11"
-        android:text="@string/pause_practice"
-        app:layout_constraintBottom_toBottomOf="@+id/textView53"
-        app:layout_constraintStart_toEndOf="@+id/imageView27"
-        app:layout_constraintTop_toTopOf="@+id/textView53" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/meditate_daily_calm_play"
+                app:layout_constraintBottom_toBottomOf="@+id/view6"
+                app:layout_constraintEnd_toEndOf="@+id/view6"
+                app:layout_constraintTop_toTopOf="@+id/view6"
+                android:contentDescription="@null" />
 
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:orientation="vertical"
+                app:constraint_referenced_ids="textView54,textView53"
+                app:layout_constraintBottom_toBottomOf="@+id/view6"
+                app:layout_constraintStart_toStartOf="@+id/view6"
+                app:layout_constraintTop_toTopOf="@+id/view6" />
+
+            <TextView
+                android:id="@+id/textView54"
+                style="@style/helvetica_bold_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/daily_calm"
+                app:layout_constraintStart_toStartOf="@+id/flow8"
+                app:layout_constraintTop_toTopOf="@+id/flow8" />
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/helvetica_medium_dark_gray_11"
+                android:text="@string/apr"
+                app:layout_constraintBottom_toBottomOf="@+id/flow8"
+                app:layout_constraintStart_toStartOf="@+id/flow8"
+                app:layout_constraintTop_toBottomOf="@+id/textView54" />
+
+            <ImageView
+                android:id="@+id/imageView27"
+                android:layout_width="3dp"
+                android:layout_height="3dp"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/dark_gray_dot"
+                app:layout_constraintBottom_toBottomOf="@+id/textView53"
+                app:layout_constraintStart_toEndOf="@+id/textView53"
+                app:layout_constraintTop_toTopOf="@+id/textView53" />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                style="@style/helvetica_medium_dark_gray_11"
+                android:text="@string/pause_practice"
+                app:layout_constraintBottom_toBottomOf="@+id/textView53"
+                app:layout_constraintStart_toEndOf="@+id/imageView27"
+                app:layout_constraintTop_toTopOf="@+id/textView53" />
+
+            <!--Список картинок-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imagesRecyclerView"
+                android:layout_width="match_parent"
+                android:overScrollMode="never"
+                android:layout_height="358dp"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view6"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+    <!--Навигационная панель-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/tabBarLayout"
         android:layout_width="match_parent"
