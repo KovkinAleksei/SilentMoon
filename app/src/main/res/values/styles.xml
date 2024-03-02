@@ -214,6 +214,14 @@
         <item name="android:textColor">@color/tab_bar_sleep_color</item>
     </style>
 
+    <style name="helvetica_medium_awhite_14" parent="helvetica_medium_gray_14">
+        <item name="android:textColor">@color/almost_white</item>
+    </style>
+
+    <style name="helvetica_medium_awhite_24" parent="helvetica_medium_awhite_14">
+        <item name="android:textSize">24sp</item>
+    </style>
+
     <style name="helvetica_medium_dark_gray_11" parent="helvetica_medium_11">
         <item name="android:textColor">@color/dark_gray_color</item>
     </style>

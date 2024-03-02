@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentPlayOptionBinding
+import com.example.mobile_hard_mad_lab1.playOptionScreen.model.RelatedAdapter
 
 class PlayOptionFragment : Fragment() {
     private lateinit var binding : FragmentPlayOptionBinding
@@ -26,6 +28,15 @@ class PlayOptionFragment : Fragment() {
     ): View {
         binding = FragmentPlayOptionBinding.inflate(inflater, container, false)
         fixMargins(container)
+
+        val recyclerView = binding.relatedRecyclerView
+        val viewManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        val viewAdapter = RelatedAdapter(arrayOf("Moon Clouds", "Sweet Sleep", "Night Island"))
+
+        recyclerView.apply {
+            layoutManager = viewManager
+            adapter = viewAdapter
+        }
 
         return binding.root
     }

@@ -30,7 +30,7 @@ class HomeAdapter(
         val bgImage = holder.itemView.findViewById<ImageView>(R.id.storyImage)
         bgImage.setImageResource(recommendations[position].imageResource)
 
-        val recommendationBg = holder.itemView.findViewById<View>(R.id.recommendationBg)
+        val recommendationBg = holder.itemView.findViewById<View>(R.id.storyBg)
 
         recommendationBg.setOnClickListener {
             onCardClick()

@@ -11,7 +11,6 @@
         android:id="@+id/storyBg"
         android:layout_width="0dp"
         android:layout_height="123dp"
-        android:layout_marginEnd="20dp"
         android:background="@drawable/rounded_shape_10"
         android:backgroundTint="@color/focus_bg_color"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +26,7 @@
         android:scaleType="fitXY"
         android:src="@drawable/focus_bg"
         app:layout_constraintBottom_toBottomOf="@+id/storyBg"
-        app:layout_constraintEnd_toEndOf="@+id/storyBg"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/storyBg"
         app:layout_constraintTop_toTopOf="@+id/storyBg"
         tools:ignore="UnusedAttribute" />
