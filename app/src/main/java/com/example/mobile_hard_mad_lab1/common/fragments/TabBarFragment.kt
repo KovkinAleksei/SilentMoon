@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentTabBarBinding
+import com.example.mobile_hard_mad_lab1.homeScreen.HomeFragmentDirections
 
 private const val SELECTED_SCREEN = "selected_screen"
 
@@ -43,12 +44,20 @@ class TabBarFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val navController = findNavController()
         val meditateButton = binding.meditateTabBar
+        val musicButton = binding.musicTabBar
 
-        if (arguments?.getInt(SELECTED_SCREEN) != R.id.meditateFragment)
+        if (arguments?.getInt(SELECTED_SCREEN) != R.id.meditateFragment){
             meditateButton.setOnClickListener {
                 navController.navigate(R.id.action_homeFragment_to_meditateFragment)
                 marginIsFixed = false
             }
+
+            musicButton.setOnClickListener {
+                navController.navigate(R.id.action_homeFragment_to_musicFragment)
+                marginIsFixed = false
+            }
+        }
+
         else if (arguments?.getInt(SELECTED_SCREEN) != R.id.homeFragment) {
             val meditateBg = binding.meditateBg
             meditateBg.background.setTint(Color.parseColor("#8E97FD"))
@@ -72,6 +81,11 @@ class TabBarFragment : Fragment() {
 
             homeTabBarButton.setOnClickListener {
                 navController.navigate(R.id.action_meditateFragment_to_homeFragment)
+                marginIsFixed = false
+            }
+
+            musicButton.setOnClickListener {
+                navController.navigate(R.id.action_meditateFragment_to_musicFragment)
                 marginIsFixed = false
             }
         }

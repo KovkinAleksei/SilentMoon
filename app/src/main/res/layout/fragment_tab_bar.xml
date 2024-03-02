@@ -96,6 +96,15 @@
         app:layout_constraintTop_toTopOf="@id/bottomNavBar"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <View
+        android:id="@+id/musicTabBar"
+        android:layout_width="46dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintStart_toStartOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="@id/bottomNavBar" />
+
     <ImageView
         android:id="@+id/imageView19"
         android:layout_width="wrap_content"
