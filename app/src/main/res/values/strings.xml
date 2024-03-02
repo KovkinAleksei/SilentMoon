@@ -95,4 +95,6 @@
     <string name="audio_start">01:30</string>
     <string name="audio_end_time">45:00</string>
     <string name="days_of_calm_uppercase">7 DAYS OF CALM</string>
+    <string name="welcome_to_sleep">Welcome to Sleep</string>
+    <string name="explore_sleep">Explore the new king of sleep. It uses sound and visualization to create perfect conditions for refreshing sleep</string>
 </resources>

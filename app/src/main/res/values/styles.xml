@@ -153,8 +153,20 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="helvetice_light_awhite_16" parent="helvetica_medium_16">
+        <item name="android:textColor">@color/almost_white</item>
+        <item name="fontFamily">@font/helvetica_neue_light</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+    </style>
+
     <style name="helvetica_bold_18" parent="helvetica_medium_18">
         <item name="fontFamily">@font/helvetica_neueue_bold</item>
+    </style>
+
+    <style name="helvetica_bold_awhite_30" parent="helvetica_bold_18">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/almost_white</item>
+        <item name="android:letterSpacing">0.01</item>
     </style>
 
     <style name="helvetica_bold_34" parent="helvetica_bold_18">
