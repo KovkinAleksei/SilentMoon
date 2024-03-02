@@ -20,7 +20,21 @@ class AudioService {
                 duration = 3,
                 isSelected = false
             ),
-
+            Audio(
+                name = "Focus Attention",
+                duration = 10,
+                isSelected = false
+            ),
+            Audio(
+                name = "Body Scan",
+                duration = 5,
+                isSelected = false
+            ),
+            Audio(
+                name = "Making Happiness",
+                duration = 3,
+                isSelected = false
+            ),
             Audio(
                 name = "Focus Attention",
                 duration = 10,
