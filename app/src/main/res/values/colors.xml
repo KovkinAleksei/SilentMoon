@@ -23,6 +23,7 @@
     <color name="audio_divider_color">#ADB8D9</color>
     <color name="shadow_color">#F2F2F2</color>
     <color name="divider_color">#E1E1E5</color>
+    <color name="cancel_stroke_color">#E1E1E5</color>
     <color name="gold">#FFECCC</color>
     <color name="improve_performance_bg_color">#FA6E5A</color>
     <color name="relaxation_bg_color">#FFC97E</color>
@@ -30,4 +31,7 @@
     <color name="focus_bg_color">#AFDBC5</color>
     <color name="improve_performance_text_color">#FEF9F3</color>
     <color name="dark_gray_color">#5A6175</color>
+    <color name="music_buttons_color">#B6B8BF</color>
+    <color name="music_bg_color">#FAF7F2</color>
+    <color name="pause_stroke_color">#BABCC6</color>
 </resources>

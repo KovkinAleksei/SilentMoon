@@ -92,4 +92,7 @@
     <string name="apr">APR 30</string>
     <string name="pause_practice">PAUSE PRACTICE</string>
     <string name="days_of_calm">7 Days of Calm</string>
+    <string name="audio_start">01:30</string>
+    <string name="audio_end_time">45:00</string>
+    <string name="days_of_calm_uppercase">7 DAYS OF CALM</string>
 </resources>
