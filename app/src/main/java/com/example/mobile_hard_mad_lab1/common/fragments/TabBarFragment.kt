@@ -44,16 +44,10 @@ class TabBarFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val navController = findNavController()
         val meditateButton = binding.meditateTabBar
-        val musicButton = binding.musicTabBar
 
         if (arguments?.getInt(SELECTED_SCREEN) != R.id.meditateFragment){
             meditateButton.setOnClickListener {
                 navController.navigate(R.id.action_homeFragment_to_meditateFragment)
-                marginIsFixed = false
-            }
-
-            musicButton.setOnClickListener {
-                navController.navigate(R.id.action_homeFragment_to_musicFragment)
                 marginIsFixed = false
             }
         }
@@ -83,11 +77,19 @@ class TabBarFragment : Fragment() {
                 navController.navigate(R.id.action_meditateFragment_to_homeFragment)
                 marginIsFixed = false
             }
+        }
 
-            musicButton.setOnClickListener {
-                navController.navigate(R.id.action_meditateFragment_to_musicFragment)
-                marginIsFixed = false
-            }
+        val musicButton = binding.musicTabBar
+        val sleepButton = binding.sleepTabBar
+
+        musicButton.setOnClickListener {
+            navController.navigate(R.id.action_meditateFragment_to_musicFragment)
+            marginIsFixed = false
+        }
+
+        sleepButton.setOnClickListener {
+            navController.navigate(R.id.welcomeSleepFragment)
+            marginIsFixed = false
         }
     }
 
