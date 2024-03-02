@@ -36,4 +36,7 @@
     <color name="pause_stroke_color">#BABCC6</color>
     <color name="welcome_sleep_bg_color">#03174C</color>
     <color name="almost_white">#E6E7F2</color>
+    <color name="sleep_bg_color">#03174C</color>
+    <color name="the_ocean_moon_color">#FFE7BF</color>
+    <color name="tab_bar_sleep_color">#98A1BD</color>
 </resources>

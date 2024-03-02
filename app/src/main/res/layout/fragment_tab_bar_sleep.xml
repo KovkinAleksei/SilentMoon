@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".common.fragments.TabBarSleepFragment">
+
+    <View
+        android:id="@+id/tabBarView"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/sleep_bg_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tabBarView"
+        app:layout_constraintEnd_toEndOf="@+id/textView63"
+        app:layout_constraintStart_toStartOf="@+id/textView63"
+        app:layout_constraintTop_toTopOf="@+id/tabBarView" />
+
+    <ImageView
+        android:id="@+id/meditateTabBarImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:contentDescription="@null"
+        android:src="@drawable/meditate_sleep"
+        app:layout_constraintEnd_toEndOf="@+id/tabBarView"
+        app:layout_constraintStart_toStartOf="@+id/tabBarView"
+        app:layout_constraintTop_toTopOf="@+id/tabBarView" />
+
+    <TextView
+        android:id="@+id/textView63"
+        style="@style/helvetica_medium_sleep_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/meditate"
+        app:layout_constraintBottom_toBottomOf="@+id/tabBarView"
+        app:layout_constraintEnd_toEndOf="@+id/tabBarView"
+        app:layout_constraintStart_toStartOf="@+id/tabBarView" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@null"
+        android:src="@drawable/person_sleep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tabBarView" />
+
+    <TextView
+        style="@style/helvetica_medium_sleep_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/afsar"
+        app:layout_constraintBottom_toBottomOf="@+id/tabBarView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView31"
+        app:layout_constraintStart_toStartOf="@+id/imageView31" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="22dp"
+        android:contentDescription="@null"
+        android:src="@drawable/home_sleep"
+        app:layout_constraintStart_toStartOf="@+id/tabBarView"
+        app:layout_constraintTop_toTopOf="@+id/tabBarView" />
+
+    <TextView
+        style="@style/helvetica_medium_sleep_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/home"
+        app:layout_constraintBottom_toBottomOf="@+id/tabBarView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView36"
+        app:layout_constraintStart_toStartOf="@+id/imageView36" />
+
+    <ImageView
+        android:id="@+id/imageView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:contentDescription="@null"
+        android:src="@drawable/music_sleep"
+        app:layout_constraintEnd_toStartOf="@+id/imageView31"
+        app:layout_constraintStart_toEndOf="@+id/meditateTabBarImage"
+        app:layout_constraintTop_toTopOf="@+id/tabBarView" />
+
+    <TextView
+        style="@style/helvetica_medium_sleep_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/music_nav_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/tabBarView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView37"
+        app:layout_constraintStart_toStartOf="@+id/imageView37" />
+
+    <View
+        android:id="@+id/sleepSelectedBg"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/rounded_shape_20"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@+id/sleepTabBarImage"
+        app:layout_constraintEnd_toEndOf="@+id/sleepTabBarImage"
+        app:layout_constraintStart_toStartOf="@+id/sleepTabBarImage"
+        app:layout_constraintTop_toTopOf="@+id/sleepTabBarImage" />
+    
+    <ImageView
+        android:id="@+id/sleepTabBarImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/sleep_selected"
+        app:layout_constraintEnd_toStartOf="@+id/meditateTabBarImage"
+        app:layout_constraintStart_toEndOf="@+id/imageView36"
+        app:layout_constraintTop_toTopOf="@+id/tabBarView"
+        android:contentDescription="@null" />
+
+    <TextView
+        style="@style/helvetica_medium_sleep_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/sleep"
+        android:textColor="@color/almost_white"
+        app:layout_constraintBottom_toBottomOf="@+id/tabBarView"
+        app:layout_constraintEnd_toEndOf="@+id/sleepTabBarImage"
+        app:layout_constraintStart_toStartOf="@+id/sleepTabBarImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

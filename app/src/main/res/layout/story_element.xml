@@ -4,12 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="186dp"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
 
     <View
         android:id="@+id/recommendationBg"
         android:layout_width="0dp"
-        android:layout_height="113dp"
+        android:layout_height="123dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/rounded_shape_10"
         android:backgroundTint="@color/focus_bg_color"
@@ -33,7 +34,7 @@
 
     <TextView
         android:id="@+id/storyName"
-        style="@style/roboto_bold_title"
+        style="@style/helvetica_bold_awhite_18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -43,11 +44,11 @@
 
     <TextView
         android:id="@+id/textView42"
-        style="@style/roboto_gray_medium"
+        style="@style/helvetica_medium_sleep_11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="@string/meditation"
+        android:text="@string/story_duration"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/storyName" />
 
@@ -59,16 +60,17 @@
         android:src="@drawable/dot"
         app:layout_constraintBottom_toBottomOf="@+id/textView42"
         app:layout_constraintStart_toEndOf="@+id/textView42"
-        app:layout_constraintTop_toTopOf="@+id/textView42" />
+        app:layout_constraintTop_toTopOf="@+id/textView42"
+        android:contentDescription="@null" />
 
     <TextView
         android:id="@+id/textView43"
-        style="@style/roboto_gray_medium"
+        style="@style/helvetica_medium_sleep_11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="6dp"
-        android:text="@string/duration"
+        android:text="@string/sleep_music"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
         app:layout_constraintTop_toBottomOf="@+id/storyName" />
 

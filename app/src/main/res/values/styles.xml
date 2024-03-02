@@ -153,7 +153,7 @@
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="helvetice_light_awhite_16" parent="helvetica_medium_16">
+    <style name="helvetica_light_awhite_16" parent="helvetica_medium_16">
         <item name="android:textColor">@color/almost_white</item>
         <item name="fontFamily">@font/helvetica_neue_light</item>
         <item name="android:lineSpacingExtra">8dp</item>
@@ -163,10 +163,18 @@
         <item name="fontFamily">@font/helvetica_neueue_bold</item>
     </style>
 
+    <style name="helvetica_bold_awhite_18" parent="helvetica_bold_18">
+        <item name="android:textColor">@color/almost_white</item>
+    </style>
+
     <style name="helvetica_bold_awhite_30" parent="helvetica_bold_18">
         <item name="android:textSize">30sp</item>
         <item name="android:textColor">@color/almost_white</item>
         <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="helvetica_bold_awhite_28" parent="helvetica_bold_awhite_30">
+        <item name="android:textSize">28sp</item>
     </style>
 
     <style name="helvetica_bold_34" parent="helvetica_bold_18">
@@ -181,9 +189,21 @@
         <item name="android:textSize">11sp</item>
     </style>
 
+    <style name="helvetica_medium_sleep_11" parent="helvetica_medium_11">
+        <item name="android:textColor">@color/tab_bar_sleep_color</item>
+    </style>
+
+    <style name="helvetica_medium_12" parent="helvetica_medium_18">
+        <item name="android:textSize">12sp</item>
+    </style>
+
     <style name="helvetica_medium_gray_14" parent="helvetica_medium_18">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="helvetica_medium_sleep_14" parent="helvetica_medium_gray_14">
+        <item name="android:textColor">@color/tab_bar_sleep_color</item>
     </style>
 
     <style name="helvetica_medium_dark_gray_11" parent="helvetica_medium_11">
@@ -262,6 +282,13 @@
 
     <style name="nav_bar_unselected" parent="nav_bar_selected">
         <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="grandmond_semibold_yellow_36">
+        <item name="android:fontFamily">@font/grandmond_semibold</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">@color/the_ocean_moon_color</item>
+        <item name="android:textSize">36sp</item>
     </style>
 
 </resources>

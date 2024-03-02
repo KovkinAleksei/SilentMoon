@@ -79,11 +79,15 @@ class TabBarFragment : Fragment() {
             }
         }
 
+        else if (arguments?.getInt(SELECTED_SCREEN) == R.id.sleepFragment) {
+
+        }
+
         val musicButton = binding.musicTabBar
         val sleepButton = binding.sleepTabBar
 
         musicButton.setOnClickListener {
-            navController.navigate(R.id.action_meditateFragment_to_musicFragment)
+            navController.navigate(R.id.musicFragment)
             marginIsFixed = false
         }
 

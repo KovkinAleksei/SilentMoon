@@ -24,10 +24,10 @@ class HomeAdapter(
     }
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
-        val recommendation = holder.itemView.findViewById<TextView>(R.id.recommendationName)
+        val recommendation = holder.itemView.findViewById<TextView>(R.id.storyName)
         recommendation.text = recommendations[position].name
 
-        val bgImage = holder.itemView.findViewById<ImageView>(R.id.backgroundImageView)
+        val bgImage = holder.itemView.findViewById<ImageView>(R.id.storyImage)
         bgImage.setImageResource(recommendations[position].imageResource)
 
         val recommendationBg = holder.itemView.findViewById<View>(R.id.recommendationBg)
