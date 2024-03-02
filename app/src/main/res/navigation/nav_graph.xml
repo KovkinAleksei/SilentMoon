@@ -112,5 +112,16 @@
         android:id="@+id/welcomeSleepFragment"
         android:name="com.example.mobile_hard_mad_lab1.welcomeSleepScreen.WelcomeSleepFragment"
         android:label="fragment_welcome_sleep"
-        tools:layout="@layout/fragment_welcome_sleep" />
+        tools:layout="@layout/fragment_welcome_sleep" >
+        <action
+            android:id="@+id/action_welcomeSleepFragment_to_sleepFragment"
+            app:destination="@id/sleepFragment"
+            app:popUpTo="@id/welcomeSleepFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sleepFragment"
+        android:name="com.example.mobile_hard_mad_lab1.sleepScreen.SleepFragment"
+        android:label="fragment_sleep"
+        tools:layout="@layout/fragment_sleep" />
 </navigation>
