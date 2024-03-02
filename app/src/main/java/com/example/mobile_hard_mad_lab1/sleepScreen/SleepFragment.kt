@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mobile_hard_mad_lab1.R
@@ -53,7 +54,14 @@ class SleepFragment : Fragment() {
         // Recycler View для Sleep Stories
         val storiesRecyclerView = binding.storiesRecyclerView
         val storiesViewManager = GridLayoutManager(context, 2)
-        val storiesAdapter = StoriesAdapter(storyService.generateStories())
+        val navController = findNavController()
+
+        val onStoryClick = {
+            navController.navigate(R.id.playOptionFragment)
+            marginIsFixed = false
+        }
+
+        val storiesAdapter = StoriesAdapter(storyService.generateStories(), onStoryClick)
 
         storiesRecyclerView.apply {
             layoutManager = storiesViewManager

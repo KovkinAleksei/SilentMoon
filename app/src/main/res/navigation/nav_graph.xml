@@ -123,5 +123,14 @@
         android:id="@+id/sleepFragment"
         android:name="com.example.mobile_hard_mad_lab1.sleepScreen.SleepFragment"
         android:label="fragment_sleep"
-        tools:layout="@layout/fragment_sleep" />
+        tools:layout="@layout/fragment_sleep" >
+        <action
+            android:id="@+id/action_sleepFragment_to_playOptionFragment"
+            app:destination="@id/playOptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playOptionFragment"
+        android:name="com.example.mobile_hard_mad_lab1.playOptionScreen.PlayOptionFragment"
+        android:label="fragment_play_option"
+        tools:layout="@layout/fragment_play_option" />
 </navigation>
