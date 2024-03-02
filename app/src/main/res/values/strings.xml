@@ -78,7 +78,7 @@
     <string name="music_nav_bar">Music</string>
     <string name="afsar_capital">Afsar</string>
     <string name="happy_morning">Happy Morning</string>
-    <string name="ease_the_mind">Ease the mind into a restful night\'s sleep with deep, ambient tones</string>
+    <string name="ease_the_mind">Ease the mind into a restful night\'s sleep with these deep, ambient tones.</string>
     <string name="favorits_count">24.232 Favorits</string>
     <string name="listenings_count">34.234 Listenings</string>
     <string name="pick_a_narrator">Pick a Narrator</string>
@@ -103,4 +103,6 @@
     <string name="non_stop_mixes">Non-stop 8- hour mixes of our most popular sleep audio</string>
     <string name="story_duration">45 MIN</string>
     <string name="sleep_music">SLEEP MUSIC</string>
+    <string name="night_island">Night Island</string>
+    <string name="night_island_duration">45 MIN</string>
 </resources>
