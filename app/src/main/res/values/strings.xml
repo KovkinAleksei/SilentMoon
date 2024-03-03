@@ -106,4 +106,5 @@
     <string name="night_island">Night Island</string>
     <string name="night_island_duration">45 MIN</string>
     <string name="related">RELATED</string>
+    <string name="play">PLAY</string>
 </resources>

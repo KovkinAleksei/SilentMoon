@@ -17,7 +17,7 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.databinding.RelatedElementBinding
 
 class RelatedAdapter(
-    private var relations : Array<String>
+    private var relations : Array<RelatedStory>
 ) : RecyclerView.Adapter<RelatedAdapter.RelatedViewHolder>() {
 
     override fun getItemCount() = relations.size
@@ -31,21 +31,10 @@ class RelatedAdapter(
 
     override fun onBindViewHolder(holder: RelatedViewHolder, position: Int) {
         val storyName = holder.itemView.findViewById<TextView>(R.id.storyName)
-        storyName.text = relations[position]
+        storyName.text = relations[position].name
 
-        val relatedLayout = holder.itemView.findViewById<ConstraintLayout>(R.id.relatedStoryLayout)
-        val margin = (20 * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
-
-        relatedLayout.post {
-            val halfWidth = (relatedLayout.width - margin) / 2// - margin
-            val layoutParams = relatedLayout.layoutParams as RecyclerView.LayoutParams
-            layoutParams.width = halfWidth
-
-            relatedLayout.layoutParams = layoutParams
-        }
-
-        val params = relatedLayout.layoutParams as ViewGroup.MarginLayoutParams
-        params.setMargins(0, 0, margin, 0)
+        val storyImage = holder.itemView.findViewById<ImageView>(R.id.storyImage)
+        storyImage.setImageResource(relations[position].image)
     }
 
     class RelatedViewHolder(binding: RelatedElementBinding) : RecyclerView.ViewHolder(binding.root)
