@@ -20,160 +20,181 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-    <!--Фон-->
-    <ImageView
-        android:id="@+id/imageView30"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:src="@drawable/sleep_top_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@null" />
+            <!--Фон-->
+            <ImageView
+                android:id="@+id/imageView30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/sleep_top_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@null" />
 
-    <ImageView
-        android:id="@+id/sleepSky"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="10dp"
-        android:contentDescription="@null"
-        android:scaleType="fitXY"
-        android:src="@drawable/sleep_sky"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/sleepSky"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/sleep_sky"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <!--Заголовок экрана-->
-    <TextView
-        android:id="@+id/textView58"
-        style="@style/helvetica_bold_awhite_28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
-        android:text="@string/sleep_stories"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <!--Заголовок экрана-->
+            <TextView
+                android:id="@+id/textView58"
+                style="@style/helvetica_bold_awhite_28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="66dp"
+                android:text="@string/sleep_stories"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView59"
-        style="@style/helvetica_light_awhite_16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:paddingHorizontal="64dp"
-        android:text="@string/soothing_bedtime"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView58" />
+            <TextView
+                android:id="@+id/textView59"
+                style="@style/helvetica_light_awhite_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="64dp"
+                android:text="@string/soothing_bedtime"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView58" />
 
-    <!--Список категорий-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/categoriesRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:overScrollMode="never"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView59" />
+            <!--Список категорий-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoriesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView59" />
 
-    <!--The Ocean Moon-->
-    <ImageView
-        android:id="@+id/imageView35"
-        android:layout_width="match_parent"
-        android:layout_height="233dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="30dp"
-        android:contentDescription="@null"
-        android:scaleType="fitXY"
-        android:src="@drawable/the_ocean_moon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoriesRecyclerView" />
+            <!--Таблица с картинками-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/categoriesRecyclerView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:stretchColumns="*">
 
-    <View
-        android:id="@+id/view9"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:alpha="0.2"
-        android:background="@drawable/circle_shape"
-        android:backgroundTint="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/imageView35"
-        app:layout_constraintTop_toTopOf="@+id/imageView35" />
+                <!--The Ocean Moon-->
+                <TableRow
+                    android:layout_width="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/lock"
-        app:layout_constraintBottom_toBottomOf="@+id/view9"
-        app:layout_constraintEnd_toEndOf="@+id/view9"
-        app:layout_constraintStart_toStartOf="@+id/view9"
-        app:layout_constraintTop_toTopOf="@+id/view9"
-        android:contentDescription="@null" />
+                        <ImageView
+                            android:id="@+id/imageView35"
+                            android:layout_width="0dp"
+                            android:layout_height="233dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="@null"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/the_ocean_moon"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView60"
-        style="@style/grandmond_semibold_yellow_36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="@string/the_ocean_moon"
-        app:layout_constraintEnd_toEndOf="@+id/imageView35"
-        app:layout_constraintStart_toStartOf="@+id/imageView35"
-        app:layout_constraintTop_toTopOf="@+id/imageView35" />
+                        <View
+                            android:id="@+id/view9"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:alpha="0.2"
+                            android:background="@drawable/circle_shape"
+                            android:backgroundTint="@color/white"
+                            app:layout_constraintStart_toStartOf="@+id/imageView35"
+                            app:layout_constraintTop_toTopOf="@+id/imageView35" />
 
-    <TextView
-        android:id="@+id/textView61"
-        style="@style/helvetica_light_awhite_16"
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="@string/non_stop_mixes"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/imageView35"
-        app:layout_constraintStart_toStartOf="@+id/imageView35"
-        app:layout_constraintTop_toBottomOf="@+id/textView60" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@null"
+                            android:src="@drawable/lock"
+                            app:layout_constraintBottom_toBottomOf="@+id/view9"
+                            app:layout_constraintEnd_toEndOf="@+id/view9"
+                            app:layout_constraintStart_toStartOf="@+id/view9"
+                            app:layout_constraintTop_toTopOf="@+id/view9" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/startButton"
-        style="@style/gray_button"
-        android:layout_width="70dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView35"
-        app:layout_constraintEnd_toEndOf="@+id/imageView35"
-        app:layout_constraintStart_toStartOf="@+id/imageView35" />
+                        <TextView
+                            android:id="@+id/textView60"
+                            style="@style/grandmond_semibold_yellow_36"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="68dp"
+                            android:text="@string/the_ocean_moon"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView35"
+                            app:layout_constraintStart_toStartOf="@+id/imageView35"
+                            app:layout_constraintTop_toTopOf="@+id/imageView35" />
 
-    <TextView
-        android:id="@+id/textView62"
-        style="@style/helvetica_medium_12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/start"
-        app:layout_constraintBottom_toBottomOf="@+id/startButton"
-        app:layout_constraintEnd_toEndOf="@+id/startButton"
-        app:layout_constraintStart_toStartOf="@+id/startButton"
-        app:layout_constraintTop_toTopOf="@+id/startButton" />
+                        <TextView
+                            android:id="@+id/textView61"
+                            style="@style/helvetica_light_awhite_16"
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/non_stop_mixes"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView35"
+                            app:layout_constraintStart_toStartOf="@+id/imageView35"
+                            app:layout_constraintTop_toBottomOf="@+id/textView60" />
 
-    <!--Список Sleep Stories-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/storiesRecyclerView"
-        android:overScrollMode="never"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView35" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/startButton"
+                            style="@style/gray_button"
+                            android:layout_width="70dp"
+                            android:layout_height="35dp"
+                            android:layout_marginBottom="20dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView35"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView35"
+                            app:layout_constraintStart_toStartOf="@+id/imageView35" />
+
+                        <TextView
+                            android:id="@+id/textView62"
+                            style="@style/helvetica_medium_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/start"
+                            app:layout_constraintBottom_toBottomOf="@+id/startButton"
+                            app:layout_constraintEnd_toEndOf="@+id/startButton"
+                            app:layout_constraintStart_toStartOf="@+id/startButton"
+                            app:layout_constraintTop_toTopOf="@+id/startButton" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </TableRow>
+
+                <!--Список Sleep Stories-->
+                <TableRow
+                    android:layout_width="match_parent">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/storiesRecyclerView"
+                        android:overScrollMode="never"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView35" />
+                </TableRow>
+            </TableLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -71,6 +71,13 @@ class SleepFragment : Fragment() {
         val tabBar = TabBarSleepFragment.newInstance(R.id.sleepFragment)
         parentFragmentManager.beginTransaction().replace(R.id.tabBarLayout, tabBar).commit()
 
+        val startButton = binding.startButton
+
+        startButton.setOnClickListener {
+            navController.navigate(R.id.sleepMusicFragment)
+            marginIsFixed = false
+        }
+
         return binding.root
     }
 

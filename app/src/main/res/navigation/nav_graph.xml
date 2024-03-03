@@ -127,10 +127,22 @@
         <action
             android:id="@+id/action_sleepFragment_to_playOptionFragment"
             app:destination="@id/playOptionFragment" />
+        <action
+            android:id="@+id/action_sleepFragment_to_sleepMusicFragment"
+            app:destination="@id/sleepMusicFragment" />
     </fragment>
     <fragment
         android:id="@+id/playOptionFragment"
         android:name="com.example.mobile_hard_mad_lab1.playOptionScreen.PlayOptionFragment"
         android:label="fragment_play_option"
         tools:layout="@layout/fragment_play_option" />
+    <fragment
+        android:id="@+id/sleepMusicFragment"
+        android:name="com.example.mobile_hard_mad_lab1.sleepMusicScreen.SleepMusicFragment"
+        android:label="fragment_sleep_music"
+        tools:layout="@layout/fragment_sleep_music" >
+        <action
+            android:id="@+id/action_sleepMusicFragment_to_playOptionFragment"
+            app:destination="@id/playOptionFragment" />
+    </fragment>
 </navigation>

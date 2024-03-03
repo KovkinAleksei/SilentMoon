@@ -38,6 +38,14 @@ class PlayOptionFragment : Fragment() {
         binding = FragmentPlayOptionBinding.inflate(inflater, container, false)
         fixMargins(container)
 
+        val navController = findNavController()
+        val backButton = binding.backButton
+
+        backButton.setOnClickListener {
+            navController.navigateUp()
+            marginIsFixed = false
+        }
+
         val recyclerView = binding.relatedRecyclerView
         val viewManager = GridLayoutManager(context, 2)
         val viewAdapter = RelatedAdapter(relatedStoryService.generateRelatedStories())
@@ -45,14 +53,6 @@ class PlayOptionFragment : Fragment() {
         recyclerView.apply {
             layoutManager = viewManager
             adapter = viewAdapter
-        }
-
-        val navController = findNavController()
-        val backButton = binding.backButton
-
-        backButton.setOnClickListener {
-            navController.navigateUp()
-            marginIsFixed = false
         }
 
         return binding.root
