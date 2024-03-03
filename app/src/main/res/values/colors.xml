@@ -39,4 +39,5 @@
     <color name="sleep_bg_color">#03174C</color>
     <color name="the_ocean_moon_color">#FFE7BF</color>
     <color name="tab_bar_sleep_color">#98A1BD</color>
+    <color name="night_play_button_color">#E6E7F2</color>
 </resources>

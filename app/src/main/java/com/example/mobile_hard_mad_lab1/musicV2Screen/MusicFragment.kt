@@ -1,4 +1,4 @@
-package com.example.mobile_hard_mad_lab1.musicScreen
+package com.example.mobile_hard_mad_lab1.musicV2Screen
 
 import android.os.Build
 import android.os.Bundle

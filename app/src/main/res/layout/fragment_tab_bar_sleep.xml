@@ -58,6 +58,15 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView31"
         app:layout_constraintStart_toStartOf="@+id/imageView31" />
 
+    <View
+        android:id="@+id/tabBarHome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/tabBarView"
+        app:layout_constraintEnd_toEndOf="@+id/textView72"
+        app:layout_constraintStart_toStartOf="@+id/textView72"
+        app:layout_constraintTop_toTopOf="@id/tabBarView" />
+
     <ImageView
         android:id="@+id/imageView36"
         android:layout_width="wrap_content"
@@ -70,6 +79,7 @@
         app:layout_constraintTop_toTopOf="@+id/tabBarView" />
 
     <TextView
+        android:id="@+id/textView72"
         style="@style/helvetica_medium_sleep_14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,6 +88,24 @@
         app:layout_constraintBottom_toBottomOf="@+id/tabBarView"
         app:layout_constraintEnd_toEndOf="@+id/imageView36"
         app:layout_constraintStart_toStartOf="@+id/imageView36" />
+
+    <View
+        android:id="@+id/tabBarMeditate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/tabBarView"
+        app:layout_constraintEnd_toEndOf="@+id/textView63"
+        app:layout_constraintStart_toStartOf="@+id/textView63"
+        app:layout_constraintTop_toTopOf="@id/tabBarView" />
+
+    <View
+        android:id="@+id/tabBarMusic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/tabBarView"
+        app:layout_constraintEnd_toEndOf="@+id/textView70"
+        app:layout_constraintStart_toStartOf="@+id/textView70"
+        app:layout_constraintTop_toTopOf="@id/tabBarView" />
 
     <ImageView
         android:id="@+id/imageView37"
@@ -91,6 +119,7 @@
         app:layout_constraintTop_toTopOf="@+id/tabBarView" />
 
     <TextView
+        android:id="@+id/textView70"
         style="@style/helvetica_medium_sleep_14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -123,6 +152,7 @@
         android:contentDescription="@null" />
 
     <TextView
+        android:id="@+id/textView69"
         style="@style/helvetica_medium_sleep_14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

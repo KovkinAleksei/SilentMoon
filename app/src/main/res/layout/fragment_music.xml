@@ -5,7 +5,7 @@
     android:background="@color/music_bg_color"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".musicScreen.MusicFragment">
+    tools:context=".musicV2Screen.MusicFragment">
 
     <!--Верхние кнопки-->
 

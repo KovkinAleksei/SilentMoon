@@ -222,6 +222,10 @@
         <item name="android:textColor">@color/almost_white</item>
     </style>
 
+    <style name="helvetica_medium_awhite_16" parent="helvetica_medium_awhite_14">
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="helvetica_medium_awhite_24" parent="helvetica_medium_awhite_14">
         <item name="android:textSize">24sp</item>
     </style>

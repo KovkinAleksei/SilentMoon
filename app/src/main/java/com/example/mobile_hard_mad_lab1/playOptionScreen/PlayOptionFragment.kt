@@ -16,6 +16,7 @@ import androidx.core.view.marginTop
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentPlayOptionBinding
 import com.example.mobile_hard_mad_lab1.playOptionScreen.model.RelatedAdapter
@@ -44,6 +45,11 @@ class PlayOptionFragment : Fragment() {
         backButton.setOnClickListener {
             navController.navigateUp()
             marginIsFixed = false
+        }
+
+        binding.playButton.setOnClickListener {
+            marginIsFixed = false
+            navController.navigate(R.id.nightMusicFragment)
         }
 
         val recyclerView = binding.relatedRecyclerView

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
+import com.example.mobile_hard_mad_lab1.common.fragments.TabBarFragment
 import com.example.mobile_hard_mad_lab1.common.fragments.TabBarSleepFragment
 import com.example.mobile_hard_mad_lab1.databinding.FragmentSleepBinding
 import com.example.mobile_hard_mad_lab1.sleepScreen.model.CategoryAdapter
@@ -24,7 +25,6 @@ class SleepFragment : Fragment() {
     private lateinit var binding : FragmentSleepBinding
     private val categoryService = CategorySleepService()
     private val storyService = StoryService()
-    private var marginIsFixed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +55,6 @@ class SleepFragment : Fragment() {
 
         val onStoryClick = {
             navController.navigate(R.id.playOptionFragment)
-            marginIsFixed = false
         }
 
         val storiesAdapter = StoriesAdapter(storyService.generateStories(), onStoryClick)
@@ -65,17 +64,15 @@ class SleepFragment : Fragment() {
             adapter = storiesAdapter
         }
 
-        val tabBar = TabBarSleepFragment.newInstance(R.id.sleepFragment)
-        parentFragmentManager.beginTransaction().replace(R.id.tabBarLayout, tabBar).commit()
+        val tabBarSleepFragment = TabBarSleepFragment.newInstance(R.id.sleepFragment)
+        parentFragmentManager.beginTransaction().replace(R.id.tabBarLayout, tabBarSleepFragment).commit()
 
         binding.theOceanMoonImageView.setOnClickListener {
             navController.navigate(R.id.sleepMusicFragment)
-            marginIsFixed = false
         }
 
         binding.startButton.setOnClickListener {
             navController.navigate(R.id.sleepMusicFragment)
-            marginIsFixed = false
         }
 
         return binding.root
@@ -89,12 +86,8 @@ class SleepFragment : Fragment() {
             val sleepSky = binding.sleepSky
             val tabBar = binding.tabBarLayout
 
-            if (!marginIsFixed) {
-                MarginFix.addTopMargin(sleepSky, systemInsets)
-                MarginFix.addBottomMargin(tabBar, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addTopMargin(sleepSky, systemInsets)
+            MarginFix.addBottomMargin(tabBar, systemInsets)
 
             insets
         }
