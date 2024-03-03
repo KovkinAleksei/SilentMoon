@@ -181,6 +181,10 @@
         <item name="android:textSize">34sp</item>
     </style>
 
+    <style name="helvetica_bold_awhite_24" parent="helvetica_bold_awhite_30">
+        <item name="android:textSize">24sp</item>
+    </style>
+
     <style name="helvetica_bold_awhite_28" parent="helvetica_bold_awhite_30">
         <item name="android:textSize">28sp</item>
     </style>

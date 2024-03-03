@@ -8,13 +8,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
+import com.example.mobile_hard_mad_lab1.common.fragments.TabBarSleepFragment
 import com.example.mobile_hard_mad_lab1.databinding.FragmentSleepBinding
 import com.example.mobile_hard_mad_lab1.databinding.FragmentSleepMusicBinding
+import com.example.mobile_hard_mad_lab1.playOptionScreen.PlayOptionFragment
+import com.example.mobile_hard_mad_lab1.sleepMusicScreen.model.SleepMusicAdapter
+import com.example.mobile_hard_mad_lab1.sleepMusicScreen.service.SleepMusicService
 
 class SleepMusicFragment : Fragment() {
     private lateinit var binding : FragmentSleepMusicBinding
+    private val sleepMusicService = SleepMusicService()
     private var marginIsFixed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +36,33 @@ class SleepMusicFragment : Fragment() {
         binding = FragmentSleepMusicBinding.inflate(inflater, container, false)
         fixMargins(container)
 
+        val tabBar = TabBarSleepFragment.newInstance(R.id.sleepMusicFragment)
+        parentFragmentManager.beginTransaction().replace(R.id.tabBarLayout, tabBar).commit()
+
+        val recyclerView = binding.recyclerView
+        val viewManager = GridLayoutManager(context, 2)
+        val navController = findNavController()
+
+        val onSleepMusicClick = {
+            navController.navigate(R.id.playOptionFragment)
+            marginIsFixed = false
+        }
+
+        val viewAdapter = SleepMusicAdapter(
+            music = sleepMusicService.generateSleepMusic(),
+            onClick = onSleepMusicClick
+        )
+
+        recyclerView.apply{
+            layoutManager = viewManager
+            adapter = viewAdapter
+        }
+
+
+        binding.backButtonImageView.setOnClickListener{
+            navController.navigateUp()
+            marginIsFixed = false
+        }
 
         return binding.root
     }
@@ -38,8 +72,10 @@ class SleepMusicFragment : Fragment() {
     private fun fixMargins(container: ViewGroup?) {
         container?.setOnApplyWindowInsetsListener{v, insets ->
             val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val tabBarLayout = binding.tabBarLayout
 
             if (!marginIsFixed) {
+                MarginFix.addBottomMargin(tabBarLayout, systemInsets)
 
                 marginIsFixed = true
             }

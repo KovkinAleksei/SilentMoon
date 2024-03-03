@@ -32,6 +32,10 @@ class StoriesAdapter(
         storyImage.setOnClickListener {
             onClick()
         }
+
+        storyName.setOnClickListener {
+            onClick()
+        }
     }
 
     class StoriesViewHolder(binding : StoryElementBinding) : RecyclerView.ViewHolder(binding.root)

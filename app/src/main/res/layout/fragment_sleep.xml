@@ -9,13 +9,15 @@
     tools:context=".sleepScreen.SleepFragment">
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:overScrollMode="never"
         android:layout_height="0dp"
+        android:overScrollMode="never"
         app:layout_constraintBottom_toTopOf="@id/tabBarLayout"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -25,12 +27,12 @@
                 android:id="@+id/imageView30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/sleep_top_bg"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@null" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/sleepSky"
@@ -85,21 +87,21 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/categoriesRecyclerView"
+                android:stretchColumns="*"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:stretchColumns="*">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoriesRecyclerView">
 
                 <!--The Ocean Moon-->
-                <TableRow
-                    android:layout_width="match_parent">
+                <TableRow android:layout_width="match_parent">
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/imageView35"
+                            android:id="@+id/theOceanMoonImageView"
                             android:layout_width="0dp"
                             android:layout_height="233dp"
                             android:layout_marginHorizontal="20dp"
@@ -120,8 +122,8 @@
                             android:alpha="0.2"
                             android:background="@drawable/circle_shape"
                             android:backgroundTint="@color/white"
-                            app:layout_constraintStart_toStartOf="@+id/imageView35"
-                            app:layout_constraintTop_toTopOf="@+id/imageView35" />
+                            app:layout_constraintStart_toStartOf="@+id/theOceanMoonImageView"
+                            app:layout_constraintTop_toTopOf="@+id/theOceanMoonImageView" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -140,9 +142,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="68dp"
                             android:text="@string/the_ocean_moon"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView35"
-                            app:layout_constraintStart_toStartOf="@+id/imageView35"
-                            app:layout_constraintTop_toTopOf="@+id/imageView35" />
+                            app:layout_constraintEnd_toEndOf="@+id/theOceanMoonImageView"
+                            app:layout_constraintStart_toStartOf="@+id/theOceanMoonImageView"
+                            app:layout_constraintTop_toTopOf="@+id/theOceanMoonImageView" />
 
                         <TextView
                             android:id="@+id/textView61"
@@ -152,8 +154,8 @@
                             android:layout_marginTop="5dp"
                             android:text="@string/non_stop_mixes"
                             android:textAlignment="center"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView35"
-                            app:layout_constraintStart_toStartOf="@+id/imageView35"
+                            app:layout_constraintEnd_toEndOf="@+id/theOceanMoonImageView"
+                            app:layout_constraintStart_toStartOf="@+id/theOceanMoonImageView"
                             app:layout_constraintTop_toBottomOf="@+id/textView60" />
 
                         <com.google.android.material.button.MaterialButton
@@ -162,9 +164,9 @@
                             android:layout_width="70dp"
                             android:layout_height="35dp"
                             android:layout_marginBottom="20dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView35"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView35"
-                            app:layout_constraintStart_toStartOf="@+id/imageView35" />
+                            app:layout_constraintBottom_toBottomOf="@+id/theOceanMoonImageView"
+                            app:layout_constraintEnd_toEndOf="@+id/theOceanMoonImageView"
+                            app:layout_constraintStart_toStartOf="@+id/theOceanMoonImageView" />
 
                         <TextView
                             android:id="@+id/textView62"
@@ -180,19 +182,19 @@
                 </TableRow>
 
                 <!--Список Sleep Stories-->
-                <TableRow
-                    android:layout_width="match_parent">
+                <TableRow android:layout_width="match_parent">
+
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/storiesRecyclerView"
-                        android:overScrollMode="never"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
+                        android:overScrollMode="never"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView35" />
+                        app:layout_constraintTop_toBottomOf="@+id/theOceanMoonImageView" />
                 </TableRow>
             </TableLayout>
 
@@ -200,6 +202,15 @@
     </ScrollView>
 
     <!--Tab Bar-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:src="@drawable/sleep_gradient"
+        app:layout_constraintBottom_toTopOf="@+id/tabBarLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@null" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/tabBarLayout"
         android:layout_width="match_parent"

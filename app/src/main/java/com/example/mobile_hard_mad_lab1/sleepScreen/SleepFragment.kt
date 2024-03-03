@@ -8,14 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowInsetsCompat
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
-import com.example.mobile_hard_mad_lab1.common.fragments.ContinueMethodFragment
-import com.example.mobile_hard_mad_lab1.common.fragments.TabBarFragment
 import com.example.mobile_hard_mad_lab1.common.fragments.TabBarSleepFragment
 import com.example.mobile_hard_mad_lab1.databinding.FragmentSleepBinding
 import com.example.mobile_hard_mad_lab1.sleepScreen.model.CategoryAdapter
@@ -71,9 +68,12 @@ class SleepFragment : Fragment() {
         val tabBar = TabBarSleepFragment.newInstance(R.id.sleepFragment)
         parentFragmentManager.beginTransaction().replace(R.id.tabBarLayout, tabBar).commit()
 
-        val startButton = binding.startButton
+        binding.theOceanMoonImageView.setOnClickListener {
+            navController.navigate(R.id.sleepMusicFragment)
+            marginIsFixed = false
+        }
 
-        startButton.setOnClickListener {
+        binding.startButton.setOnClickListener {
             navController.navigate(R.id.sleepMusicFragment)
             marginIsFixed = false
         }
