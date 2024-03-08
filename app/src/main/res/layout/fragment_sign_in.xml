@@ -11,12 +11,11 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-16dp"
         android:layout_marginTop="-8dp"
         android:contentDescription="@null"
         android:scaleType="fitXY"
         android:src="@drawable/sign_in_bg"
-        app:layout_constraintBottom_toBottomOf="@+id/continue_method"
+        app:layout_constraintBottom_toTopOf="@+id/have_account_flow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -114,40 +113,44 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="@string/forgot_password"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintBottom_toTopOf="@+id/have_account_flow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <!--Sign up-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/have_account_flow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="haveAccountTextView,signUpTextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/haveAccountTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/signUpTextView"
+        style="@style/roboto_blue_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-            android:text="@string/has_account"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            style="@style/roboto_gray_14" />
+        android:layout_marginStart="4dp"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toBottomOf="@+id/have_account_flow"
+        app:layout_constraintEnd_toEndOf="@+id/have_account_flow"
+        app:layout_constraintStart_toEndOf="@+id/haveAccountTextView"
+        app:layout_constraintTop_toTopOf="@+id/have_account_flow" />
 
-        <TextView
-            android:id="@+id/signUpTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+    <TextView
+        android:id="@+id/haveAccountTextView"
+        style="@style/roboto_gray_14"
+        android:layout_width="wrap_content"
 
-            android:text="@string/sign_up"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/haveAccountTextView"
-            style="@style/roboto_blue_14" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:text="@string/has_account"
+        app:layout_constraintBottom_toBottomOf="@+id/have_account_flow"
+        app:layout_constraintStart_toStartOf="@+id/have_account_flow"
+        app:layout_constraintTop_toTopOf="@+id/have_account_flow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

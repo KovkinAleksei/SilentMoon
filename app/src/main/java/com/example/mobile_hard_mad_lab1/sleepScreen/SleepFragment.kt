@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -82,7 +83,8 @@ class SleepFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.R)
     private fun fixMargins(container: ViewGroup?) {
         container?.setOnApplyWindowInsetsListener{v, insets ->
-            val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val windowInsets = ViewCompat.getRootWindowInsets(v)
+            val systemInsets = windowInsets?.getInsets(WindowInsetsCompat.Type.systemBars())
             val sleepSky = binding.sleepSky
             val tabBar = binding.tabBarLayout
 

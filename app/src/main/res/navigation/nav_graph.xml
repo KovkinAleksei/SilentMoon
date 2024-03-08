@@ -166,8 +166,7 @@
         <action
             android:id="@+id/action_sleepMusicFragment_to_homeFragment"
             app:destination="@id/homeFragment"
-            app:popUpTo="@id/homeFragment"
-            app:popUpToInclusive="true"/>
+            app:popUpTo="@id/remindersFragment" />
     </fragment>
     <fragment
         android:id="@+id/nightMusicFragment"

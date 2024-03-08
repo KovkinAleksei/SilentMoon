@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.findNavController
 import com.example.mobile_hard_mad_lab1.R
@@ -51,16 +52,15 @@ class SignInSignUpFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.R)
     private fun fixMargins(container: ViewGroup?){
         container?.setOnApplyWindowInsetsListener{v, insets ->
-            val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val windowInsets = ViewCompat.getRootWindowInsets(v)
+            val systemInsets = windowInsets?.getInsets(WindowInsetsCompat.Type.systemBars())
 
             val logo = binding.logoImageView
-            val logIn = binding.logInTextView
-            val haveAnAccount = binding.haveAccountTextView
+            val authorization = binding.flow9
 
             if (!marginIsFixed) {
                 MarginFix.addTopMargin(logo, systemInsets)
-                MarginFix.addBottomMargin(logIn, systemInsets)
-                MarginFix.addBottomMargin(haveAnAccount, systemInsets)
+                MarginFix.addBottomMargin(authorization, systemInsets)
 
                 marginIsFixed = true
             }

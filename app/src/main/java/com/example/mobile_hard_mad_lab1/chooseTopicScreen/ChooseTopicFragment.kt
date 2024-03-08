@@ -31,7 +31,7 @@ class ChooseTopicFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentChooseTopicBinding.inflate(inflater, container, false)
-        fixMargins(container)
+    //    fixMargins(container)
 
         val navController = findNavController()
         val onClick = {
@@ -67,7 +67,7 @@ class ChooseTopicFragment : Fragment() {
             val questionTextView = binding.questionTextView
 
             if (!marginIsFixed) {
-                MarginFix.addTopMargin(questionTextView, systemInsets)
+              //  MarginFix.addTopMargin(questionTextView, systemInsets)
 
                 marginIsFixed = true
             }
