@@ -19,7 +19,7 @@ class ChooseTopicService {
     private val thirdColor = "#3F414E"
     private val fourthColor = "#EBEAEC"
 
-    fun getTopicCards() : Array<TopicCard> = arrayOf(
+    fun getTopicCards(): Array<TopicCard> = arrayOf(
         TopicCard(
             name = reduceStress,
             imageResource = R.drawable.reduce_stress_bg,

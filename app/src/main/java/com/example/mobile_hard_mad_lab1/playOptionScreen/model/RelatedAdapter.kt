@@ -1,23 +1,15 @@
 package com.example.mobile_hard_mad_lab1.playOptionScreen.model
 
-import android.content.res.Resources
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.marginBottom
-import androidx.core.view.marginEnd
-import androidx.core.view.marginStart
-import androidx.core.view.marginTop
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.databinding.RelatedElementBinding
 
 class RelatedAdapter(
-    private var relations : Array<RelatedStory>
+    private var relations: Array<RelatedStory>
 ) : RecyclerView.Adapter<RelatedAdapter.RelatedViewHolder>() {
 
     override fun getItemCount() = relations.size

@@ -1,19 +1,17 @@
 package com.example.mobile_hard_mad_lab1.chooseTopicScreen.model
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.databinding.TopicCardBinding
 
 class ChooseTopicAdapter(
     private val topicsList: Array<TopicCard>,
-    val onClick : () -> Unit
+    val onClick: () -> Unit
 ) : RecyclerView.Adapter<ChooseTopicAdapter.ChooseTopicViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChooseTopicViewHolder {

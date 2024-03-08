@@ -2,13 +2,13 @@ package com.example.mobile_hard_mad_lab1.homeScreen
 
 import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mobile_hard_mad_lab1.R
@@ -19,7 +19,7 @@ import com.example.mobile_hard_mad_lab1.homeScreen.model.HomeAdapter
 import com.example.mobile_hard_mad_lab1.homeScreen.service.RecommendationsService
 
 class HomeFragment : Fragment() {
-    private lateinit var binding : FragmentHomeBinding
+    private lateinit var binding: FragmentHomeBinding
     private val recommendationService = RecommendationsService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,7 +54,8 @@ class HomeFragment : Fragment() {
         }
 
         // Добавление Tab Bar в разметку
-        parentFragmentManager.beginTransaction().replace(R.id.tabBarLayout, TabBarFragment()).commit()
+        parentFragmentManager.beginTransaction().replace(R.id.tabBarLayout, TabBarFragment())
+            .commit()
 
         return binding.root
     }
@@ -78,7 +79,7 @@ class HomeFragment : Fragment() {
     // Выравнивание отступов относительно статус бара и системной навигационной панели
     @RequiresApi(Build.VERSION_CODES.R)
     private fun fixMargins(container: ViewGroup?) {
-        container?.setOnApplyWindowInsetsListener{v, insets ->
+        container?.setOnApplyWindowInsetsListener { v, insets ->
             val windowInsets = ViewCompat.getRootWindowInsets(v)
             val systemInsets = windowInsets?.getInsets(WindowInsetsCompat.Type.systemBars())
 

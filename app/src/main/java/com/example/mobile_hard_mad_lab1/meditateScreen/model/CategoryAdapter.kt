@@ -17,7 +17,7 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.databinding.CategoryElementBinding
 
 class CategoryAdapter(
-    private val categoriesArray : Array<Category>
+    private val categoriesArray: Array<Category>
 ) : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
     override fun getItemCount() = categoriesArray.size
@@ -50,9 +50,15 @@ class CategoryAdapter(
             val params = view.layoutParams as ViewGroup.MarginLayoutParams
             val startMargin = (20 * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
 
-            params.setMargins(view.marginStart + startMargin, view.marginTop, view.marginEnd, view.marginBottom)
+            params.setMargins(
+                view.marginStart + startMargin,
+                view.marginTop,
+                view.marginEnd,
+                view.marginBottom
+            )
         }
     }
 
-    class CategoryViewHolder(binding : CategoryElementBinding) : RecyclerView.ViewHolder(binding.root)
+    class CategoryViewHolder(binding: CategoryElementBinding) :
+        RecyclerView.ViewHolder(binding.root)
 }

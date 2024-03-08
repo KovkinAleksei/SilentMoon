@@ -3,22 +3,21 @@ package com.example.mobile_hard_mad_lab1.signInScreen
 import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
-import com.example.mobile_hard_mad_lab1.databinding.FragmentSignInBinding
 import com.example.mobile_hard_mad_lab1.common.fragments.ContinueMethodFragment
-
+import com.example.mobile_hard_mad_lab1.databinding.FragmentSignInBinding
 
 class SignInFragment : Fragment() {
-    private lateinit var binding : FragmentSignInBinding
+    private lateinit var binding: FragmentSignInBinding
 
     @SuppressLint("NewApi", "CommitTransaction")
     override fun onCreateView(
@@ -26,7 +25,8 @@ class SignInFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentSignInBinding.inflate(inflater, container, false)
-        parentFragmentManager.beginTransaction().replace(R.id.continue_method, ContinueMethodFragment()).commit()
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.continue_method, ContinueMethodFragment()).commit()
 
         fixMargins(container)
 
@@ -51,8 +51,8 @@ class SignInFragment : Fragment() {
 
     // Выравнивание отступов относительно статус бара и системной навигационной панели
     @RequiresApi(Build.VERSION_CODES.R)
-    private fun fixMargins(container: ViewGroup?){
-        container?.setOnApplyWindowInsetsListener{v, insets ->
+    private fun fixMargins(container: ViewGroup?) {
+        container?.setOnApplyWindowInsetsListener { v, insets ->
             val windowInsets = ViewCompat.getRootWindowInsets(v)
             val systemInsets = windowInsets?.getInsets(WindowInsetsCompat.Type.systemBars())
 

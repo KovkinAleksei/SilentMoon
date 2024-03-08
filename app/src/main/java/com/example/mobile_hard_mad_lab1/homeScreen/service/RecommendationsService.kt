@@ -11,7 +11,7 @@ class RecommendationsService {
     private val focusColor = "#AFDBC5"
     private val happinessColor = "#FEE3B4"
 
-    fun generateRecommendations() : Array<RecommendationCard> {
+    fun generateRecommendations(): Array<RecommendationCard> {
         return arrayOf(
             RecommendationCard(
                 name = focus,

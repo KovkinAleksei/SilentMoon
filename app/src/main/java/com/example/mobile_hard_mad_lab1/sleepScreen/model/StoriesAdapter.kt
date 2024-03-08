@@ -9,8 +9,8 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.databinding.StoryElementBinding
 
 class StoriesAdapter(
-    private var stories : Array<SleepStory>,
-    private var onClick : () -> Unit
+    private var stories: Array<SleepStory>,
+    private var onClick: () -> Unit
 ) : RecyclerView.Adapter<StoriesAdapter.StoriesViewHolder>() {
 
     override fun getItemCount() = stories.size
@@ -38,5 +38,5 @@ class StoriesAdapter(
         }
     }
 
-    class StoriesViewHolder(binding : StoryElementBinding) : RecyclerView.ViewHolder(binding.root)
+    class StoriesViewHolder(binding: StoryElementBinding) : RecyclerView.ViewHolder(binding.root)
 }

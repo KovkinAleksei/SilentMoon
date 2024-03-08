@@ -3,24 +3,22 @@ package com.example.mobile_hard_mad_lab1.common.fragments
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentTabBarBinding
-import com.example.mobile_hard_mad_lab1.homeScreen.HomeFragmentDirections
 
 private const val SELECTED_SCREEN = "selected_screen"
 
 class TabBarFragment : Fragment() {
-    private lateinit var binding : FragmentTabBarBinding
-    private val selectedScreen : String? = null
+    private lateinit var binding: FragmentTabBarBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,13 +43,11 @@ class TabBarFragment : Fragment() {
         val navController = findNavController()
         val meditateButton = binding.meditateTabBar
 
-        if (arguments?.getInt(SELECTED_SCREEN) != R.id.meditateFragment){
+        if (arguments?.getInt(SELECTED_SCREEN) != R.id.meditateFragment) {
             meditateButton.setOnClickListener {
                 navController.navigate(R.id.action_homeFragment_to_meditateFragment)
             }
-        }
-
-        else if (arguments?.getInt(SELECTED_SCREEN) != R.id.homeFragment) {
+        } else if (arguments?.getInt(SELECTED_SCREEN) != R.id.homeFragment) {
             val meditateBg = binding.meditateBg
             meditateBg.background.setTint(Color.parseColor("#8E97FD"))
 
@@ -92,7 +88,7 @@ class TabBarFragment : Fragment() {
     // Выравнивание отступов относительно статус бара и системной навигационной панели
     @RequiresApi(Build.VERSION_CODES.R)
     private fun fixMargins(container: ViewGroup?) {
-        container?.setOnApplyWindowInsetsListener{v, insets ->
+        container?.setOnApplyWindowInsetsListener { v, insets ->
             val windowInsets = ViewCompat.getRootWindowInsets(v)
             val systemInsets = windowInsets?.getInsets(WindowInsetsCompat.Type.systemBars())
 

@@ -11,7 +11,7 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.databinding.MeditationImageElementBinding
 
 class MeditationImageAdapter(
-    private var meditationImages : Array<MeditationImage>
+    private var meditationImages: Array<MeditationImage>
 ) : RecyclerView.Adapter<MeditationImageAdapter.MeditationImageViewHolder>() {
 
     override fun getItemCount() = meditationImages.size
@@ -29,7 +29,8 @@ class MeditationImageAdapter(
 
         val meditationImage = holder.itemView.findViewById<ImageView>(R.id.meditationImage)
         val width = meditationImage.width
-        val height = (meditationImages[position].height * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
+        val height =
+            (meditationImages[position].height * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
         meditationImage.layoutParams = ViewGroup.LayoutParams(width, height)
 
         val layout = holder.itemView.findViewById<ConstraintLayout>(R.id.meditationLayout)
@@ -40,5 +41,6 @@ class MeditationImageAdapter(
         meditationImage.setImageResource(meditationImages[position].imageRes)
     }
 
-    class MeditationImageViewHolder(binding: MeditationImageElementBinding) : RecyclerView.ViewHolder(binding.root)
+    class MeditationImageViewHolder(binding: MeditationImageElementBinding) :
+        RecyclerView.ViewHolder(binding.root)
 }

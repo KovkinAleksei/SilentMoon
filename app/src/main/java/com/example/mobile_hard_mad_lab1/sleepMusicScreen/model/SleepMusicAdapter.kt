@@ -9,8 +9,8 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.databinding.RelatedElementBinding
 
 class SleepMusicAdapter(
-    private val music : Array<SleepMusic>,
-    private val onClick : () -> Unit
+    private val music: Array<SleepMusic>,
+    private val onClick: () -> Unit
 ) : RecyclerView.Adapter<SleepMusicAdapter.SleepMusicViewHolder>() {
     override fun getItemCount() = music.size
 
@@ -37,5 +37,6 @@ class SleepMusicAdapter(
         }
     }
 
-    class SleepMusicViewHolder(binding: RelatedElementBinding) : RecyclerView.ViewHolder(binding.root)
+    class SleepMusicViewHolder(binding: RelatedElementBinding) :
+        RecyclerView.ViewHolder(binding.root)
 }

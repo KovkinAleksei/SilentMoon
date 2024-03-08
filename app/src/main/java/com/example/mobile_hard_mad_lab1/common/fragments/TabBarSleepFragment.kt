@@ -1,10 +1,10 @@
 package com.example.mobile_hard_mad_lab1.common.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.databinding.FragmentTabBarSleepBinding
@@ -12,7 +12,7 @@ import com.example.mobile_hard_mad_lab1.databinding.FragmentTabBarSleepBinding
 private const val SELECTED_SCREEN = "selected_screen"
 
 class TabBarSleepFragment : Fragment() {
-    private lateinit var binding : FragmentTabBarSleepBinding
+    private lateinit var binding: FragmentTabBarSleepBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class TabBarSleepFragment : Fragment() {
             navController.navigate(R.id.nightMusicFragment)
         }
 
-        if (arguments?.getInt(SELECTED_SCREEN) == R.id.sleepFragment){
+        if (arguments?.getInt(SELECTED_SCREEN) == R.id.sleepFragment) {
             binding.tabBarMeditate.setOnClickListener {
                 navController.navigate(R.id.action_sleepFragment_to_meditateFragment)
             }
@@ -43,8 +43,7 @@ class TabBarSleepFragment : Fragment() {
             binding.tabBarHome.setOnClickListener {
                 navController.navigate(R.id.action_sleepFragment_to_homeFragment)
             }
-        }
-        else if (arguments?.getInt(SELECTED_SCREEN) == R.id.sleepMusicFragment){
+        } else if (arguments?.getInt(SELECTED_SCREEN) == R.id.sleepMusicFragment) {
             binding.tabBarMeditate.setOnClickListener {
                 navController.navigate(R.id.action_sleepMusicFragment_to_meditateFragment)
             }

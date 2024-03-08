@@ -16,13 +16,23 @@ class MarginFix {
         @RequiresApi(Build.VERSION_CODES.R)
         fun addTopMargin(view: View, insets: Insets?) {
             val params = view.layoutParams as ViewGroup.MarginLayoutParams
-            params.setMargins(view.marginStart, view.marginTop + insets!!.top, view.marginEnd, view.marginBottom)
+            params.setMargins(
+                view.marginStart,
+                view.marginTop + insets!!.top,
+                view.marginEnd,
+                view.marginBottom
+            )
         }
 
         @RequiresApi(Build.VERSION_CODES.R)
         fun addBottomMargin(view: View, insets: Insets?) {
             val params = view.layoutParams as ViewGroup.MarginLayoutParams
-            params.setMargins(view.marginStart, view.marginTop, view.marginEnd, view.marginBottom + insets!!.bottom)
+            params.setMargins(
+                view.marginStart,
+                view.marginTop,
+                view.marginEnd,
+                view.marginBottom + insets!!.bottom
+            )
         }
     }
 }

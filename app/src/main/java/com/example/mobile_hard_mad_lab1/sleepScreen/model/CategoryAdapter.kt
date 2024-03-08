@@ -17,7 +17,7 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.databinding.CategoryElementBinding
 
 class CategoryAdapter(
-    private var categories : Array<CategorySleep>
+    private var categories: Array<CategorySleep>
 ) : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
     override fun getItemCount() = categories.size
@@ -41,8 +41,7 @@ class CategoryAdapter(
         if (categories[position].isSelected) {
             categoryBg.background.setTint(Color.parseColor("#8E97FD"))
             categoryName.setTextColor(Color.parseColor("#E6E7F2"))
-        }
-        else {
+        } else {
             categoryBg.background.setTint(Color.parseColor("#586894"))
             categoryName.setTextColor(Color.parseColor("#98A1BD"))
         }
@@ -52,9 +51,15 @@ class CategoryAdapter(
             val params = view.layoutParams as ViewGroup.MarginLayoutParams
             val startMargin = (20 * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
 
-            params.setMargins(view.marginStart + startMargin, view.marginTop, view.marginEnd, view.marginBottom)
+            params.setMargins(
+                view.marginStart + startMargin,
+                view.marginTop,
+                view.marginEnd,
+                view.marginBottom
+            )
         }
     }
 
-    class CategoryViewHolder(binding : CategoryElementBinding) : RecyclerView.ViewHolder(binding.root)
+    class CategoryViewHolder(binding: CategoryElementBinding) :
+        RecyclerView.ViewHolder(binding.root)
 }
