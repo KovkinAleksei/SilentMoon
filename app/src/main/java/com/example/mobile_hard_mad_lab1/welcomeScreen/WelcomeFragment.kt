@@ -15,7 +15,6 @@ import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
-    private var marginIsFixed = false
     private lateinit var binding : FragmentWelcomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +39,6 @@ class WelcomeFragment : Fragment() {
 
         getStartedButton.setOnClickListener {
             navController.navigate(R.id.chooseTopicFragment)
-            marginIsFixed = false
         }
     }
 
@@ -55,13 +53,9 @@ class WelcomeFragment : Fragment() {
             val getStartedButton = binding.getStartedButton
             val hillBase = binding.hillBaseConstraintLayout
 
-            if (!marginIsFixed) {
-                MarginFix.addTopMargin(logoImageView, systemInsets)
-                MarginFix.addBottomMargin(getStartedButton, systemInsets)
-                MarginFix.addBottomMargin(hillBase, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addTopMargin(logoImageView, systemInsets)
+            MarginFix.addBottomMargin(getStartedButton, systemInsets)
+            MarginFix.addBottomMargin(hillBase, systemInsets)
 
             insets
         }

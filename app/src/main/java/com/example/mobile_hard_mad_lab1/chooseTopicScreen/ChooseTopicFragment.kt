@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -18,7 +19,6 @@ import com.example.mobile_hard_mad_lab1.databinding.FragmentChooseTopicBinding
 
 class ChooseTopicFragment : Fragment() {
     private lateinit var binding : FragmentChooseTopicBinding
-    private var marginIsFixed : Boolean = false
     private val chooseTopicService = ChooseTopicService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,12 +31,11 @@ class ChooseTopicFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentChooseTopicBinding.inflate(inflater, container, false)
-    //    fixMargins(container)
+        fixMargins(container)
 
         val navController = findNavController()
         val onClick = {
             navController.navigate(R.id.remindersFragment)
-            marginIsFixed = false
         }
 
         val recyclerView = binding.recyclerView
@@ -55,22 +54,15 @@ class ChooseTopicFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-    }
-
     // Выравнивание отступов относительно статус бара и системной навигационной панели
     @RequiresApi(Build.VERSION_CODES.R)
     private fun fixMargins(container: ViewGroup?) {
         container?.setOnApplyWindowInsetsListener{v, insets ->
-            val systemInsets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val windowInsets = ViewCompat.getRootWindowInsets(v)
+            val systemInsets = windowInsets?.getInsets(WindowInsetsCompat.Type.systemBars())
             val questionTextView = binding.questionTextView
 
-            if (!marginIsFixed) {
-              //  MarginFix.addTopMargin(questionTextView, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addTopMargin(questionTextView, systemInsets)
 
             insets
         }

@@ -16,7 +16,6 @@ import com.example.mobile_hard_mad_lab1.common.MarginFix
 import com.example.mobile_hard_mad_lab1.databinding.FragmentSignInSignUpBinding
 
 class SignInSignUpFragment : Fragment() {
-    private var marginIsFixed = false
     private lateinit var binding : FragmentSignInSignUpBinding
 
     @SuppressLint("NewApi")
@@ -39,12 +38,10 @@ class SignInSignUpFragment : Fragment() {
 
         logInButton.setOnClickListener {
             navController.navigate(R.id.signInFragment)
-            marginIsFixed = false
         }
 
         signUpButton.setOnClickListener {
             navController.navigate(R.id.signUpFragment)
-            marginIsFixed = false
         }
     }
 
@@ -58,12 +55,8 @@ class SignInSignUpFragment : Fragment() {
             val logo = binding.logoImageView
             val authorization = binding.flow9
 
-            if (!marginIsFixed) {
-                MarginFix.addTopMargin(logo, systemInsets)
-                MarginFix.addBottomMargin(authorization, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addTopMargin(logo, systemInsets)
+            MarginFix.addBottomMargin(authorization, systemInsets)
 
             insets
         }

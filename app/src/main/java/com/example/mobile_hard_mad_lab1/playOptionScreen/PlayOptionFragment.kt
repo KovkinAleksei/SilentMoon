@@ -26,7 +26,6 @@ import com.example.mobile_hard_mad_lab1.playOptionScreen.service.RelatedStorySer
 class PlayOptionFragment : Fragment() {
     private lateinit var binding : FragmentPlayOptionBinding
     private val relatedStoryService = RelatedStoryService()
-    private var marginIsFixed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,11 +44,9 @@ class PlayOptionFragment : Fragment() {
 
         backButton.setOnClickListener {
             navController.navigateUp()
-            marginIsFixed = false
         }
 
         binding.playButton.setOnClickListener {
-            marginIsFixed = false
             navController.navigate(R.id.nightMusicFragment)
         }
 
@@ -74,17 +71,13 @@ class PlayOptionFragment : Fragment() {
             val playButton = binding.playButton
             val recyclerView = binding.relatedRecyclerView
 
-            if (!marginIsFixed) {
-                if (systemInsets!!.bottom != 0) {
-                    val bottomInset = (10 * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
-                    val params = playButton.layoutParams as ViewGroup.MarginLayoutParams
-                    params.setMargins(playButton.marginStart, playButton.marginTop, playButton.marginEnd, playButton.marginBottom + bottomInset)
+            if (systemInsets!!.bottom != 0) {
+                val bottomInset = (10 * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
+                val params = playButton.layoutParams as ViewGroup.MarginLayoutParams
+                params.setMargins(playButton.marginStart, playButton.marginTop, playButton.marginEnd, playButton.marginBottom + bottomInset)
 
-                    val recyclerParams = recyclerView.layoutParams as ViewGroup.MarginLayoutParams
-                    recyclerParams.setMargins(recyclerView.marginStart, recyclerView.marginTop, recyclerView.marginEnd, recyclerView.marginBottom + bottomInset)
-                }
-
-                marginIsFixed = true
+                val recyclerParams = recyclerView.layoutParams as ViewGroup.MarginLayoutParams
+                recyclerParams.setMargins(recyclerView.marginStart, recyclerView.marginTop, recyclerView.marginEnd, recyclerView.marginBottom + bottomInset)
             }
 
             insets

@@ -17,7 +17,6 @@ import com.example.mobile_hard_mad_lab1.databinding.FragmentRemindersBinding
 
 class RemindersFragment : Fragment() {
     private lateinit var binding: FragmentRemindersBinding
-    private var marginIsFixed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +41,6 @@ class RemindersFragment : Fragment() {
 
         saveButton.setOnClickListener {
             navController.navigate(R.id.homeFragment)
-            marginIsFixed = false
         }
     }
 
@@ -56,12 +54,8 @@ class RemindersFragment : Fragment() {
             val timeTextView = binding.timeTextView
             val noThanksTextView = binding.noThanksTextView
 
-            if (!marginIsFixed) {
-                MarginFix.addTopMargin(timeTextView, systemInsets)
-                MarginFix.addBottomMargin(noThanksTextView, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addTopMargin(timeTextView, systemInsets)
+            MarginFix.addBottomMargin(noThanksTextView, systemInsets)
 
             insets
         }

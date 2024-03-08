@@ -17,7 +17,6 @@ import com.example.mobile_hard_mad_lab1.databinding.FragmentSignUpBinding
 import com.example.mobile_hard_mad_lab1.common.fragments.ContinueMethodFragment
 
 class SignUpFragment : Fragment() {
-    private var marginIsFixed = false
     private lateinit var binding : FragmentSignUpBinding
     private val privacyPolicyMessage : String = "Тут будет политика конфидециальности"
 
@@ -52,7 +51,6 @@ class SignUpFragment : Fragment() {
 
         getStartedButton.setOnClickListener {
             navController.navigate(R.id.welcomeFragment)
-            marginIsFixed = false
         }
     }
 
@@ -66,12 +64,8 @@ class SignUpFragment : Fragment() {
             val createAccountTextView = binding.createAccountTextView
             val getStartedButton = binding.getStartedButton
 
-            if (!marginIsFixed) {
-                MarginFix.addTopMargin(createAccountTextView, systemInsets)
-                MarginFix.addBottomMargin(getStartedButton, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addTopMargin(createAccountTextView, systemInsets)
+            MarginFix.addBottomMargin(getStartedButton, systemInsets)
 
             insets
         }

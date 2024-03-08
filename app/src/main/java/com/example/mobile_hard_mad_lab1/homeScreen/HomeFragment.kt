@@ -20,7 +20,6 @@ import com.example.mobile_hard_mad_lab1.homeScreen.service.RecommendationsServic
 
 class HomeFragment : Fragment() {
     private lateinit var binding : FragmentHomeBinding
-    private var marginIsFixed = false
     private val recommendationService = RecommendationsService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +41,6 @@ class HomeFragment : Fragment() {
         val navController = findNavController()
         val onRecommendationClick = {
             navController.navigate(R.id.courseDetailsFragment)
-            marginIsFixed = false
         }
 
         val viewAdapter = HomeAdapter(
@@ -70,12 +68,10 @@ class HomeFragment : Fragment() {
 
         basicsCourse.setOnClickListener {
             navController.navigate(R.id.courseDetailsFragment)
-            marginIsFixed = false
         }
 
         relaxationMusic.setOnClickListener {
             navController.navigate(R.id.courseDetailsFragment)
-            marginIsFixed = false
         }
     }
 

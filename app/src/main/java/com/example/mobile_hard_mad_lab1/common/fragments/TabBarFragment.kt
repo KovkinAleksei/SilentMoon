@@ -20,7 +20,6 @@ private const val SELECTED_SCREEN = "selected_screen"
 
 class TabBarFragment : Fragment() {
     private lateinit var binding : FragmentTabBarBinding
-    private var marginIsFixed = false
     private val selectedScreen : String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,7 +48,6 @@ class TabBarFragment : Fragment() {
         if (arguments?.getInt(SELECTED_SCREEN) != R.id.meditateFragment){
             meditateButton.setOnClickListener {
                 navController.navigate(R.id.action_homeFragment_to_meditateFragment)
-                marginIsFixed = false
             }
         }
 
@@ -76,12 +74,7 @@ class TabBarFragment : Fragment() {
 
             homeTabBarButton.setOnClickListener {
                 navController.navigate(R.id.action_meditateFragment_to_homeFragment)
-                marginIsFixed = false
             }
-        }
-
-        else if (arguments?.getInt(SELECTED_SCREEN) == R.id.sleepFragment) {
-
         }
 
         val musicButton = binding.musicTabBar
@@ -89,12 +82,10 @@ class TabBarFragment : Fragment() {
 
         musicButton.setOnClickListener {
             navController.navigate(R.id.musicFragment)
-            marginIsFixed = false
         }
 
         sleepButton.setOnClickListener {
             navController.navigate(R.id.welcomeSleepFragment)
-            marginIsFixed = false
         }
     }
 
@@ -107,11 +98,7 @@ class TabBarFragment : Fragment() {
 
             val tabBar = binding.bottomNavBar
 
-            if (!marginIsFixed) {
-                MarginFix.addBottomMargin(tabBar, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addBottomMargin(tabBar, systemInsets)
 
             insets
         }

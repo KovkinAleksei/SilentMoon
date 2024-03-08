@@ -12,7 +12,6 @@ import com.example.mobile_hard_mad_lab1.databinding.FragmentTabBarSleepBinding
 private const val SELECTED_SCREEN = "selected_screen"
 
 class TabBarSleepFragment : Fragment() {
-    private var screen: Int? = null
     private lateinit var binding : FragmentTabBarSleepBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

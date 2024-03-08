@@ -16,7 +16,6 @@ import com.example.mobile_hard_mad_lab1.databinding.FragmentMusicBinding
 
 class MusicFragment : Fragment() {
     private lateinit var binding : FragmentMusicBinding
-    private var marginIsFixed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,11 +47,7 @@ class MusicFragment : Fragment() {
             val systemInsets = windowInsets?.getInsets(WindowInsetsCompat.Type.systemBars())
             val cancelButton = binding.cancelButton
 
-            if (!marginIsFixed) {
-                MarginFix.addTopMargin(cancelButton, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addTopMargin(cancelButton, systemInsets)
 
             insets
         }

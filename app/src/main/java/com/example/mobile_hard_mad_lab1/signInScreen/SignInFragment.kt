@@ -18,7 +18,6 @@ import com.example.mobile_hard_mad_lab1.common.fragments.ContinueMethodFragment
 
 
 class SignInFragment : Fragment() {
-    private var marginIsFixed = false
     private lateinit var binding : FragmentSignInBinding
 
     @SuppressLint("NewApi", "CommitTransaction")
@@ -43,12 +42,10 @@ class SignInFragment : Fragment() {
 
         signUpButton.setOnClickListener {
             navController.navigate(R.id.signUpFragment)
-            marginIsFixed = false
         }
 
         logInButton.setOnClickListener {
             navController.navigate(R.id.welcomeFragment)
-            marginIsFixed = false
         }
     }
 
@@ -62,12 +59,8 @@ class SignInFragment : Fragment() {
             val welcomeTextView = binding.welcomeBackTextView
             val haveAccountFlow = binding.haveAccountFlow
 
-            if (!marginIsFixed) {
-                MarginFix.addTopMargin(welcomeTextView, systemInsets)
-                MarginFix.addBottomMargin(haveAccountFlow, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addTopMargin(welcomeTextView, systemInsets)
+            MarginFix.addBottomMargin(haveAccountFlow, systemInsets)
 
             insets
         }

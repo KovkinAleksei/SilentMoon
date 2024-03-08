@@ -20,7 +20,6 @@ import com.example.mobile_hard_mad_lab1.databinding.FragmentCourseDetailsBinding
 
 class CourseDetailsFragment : Fragment() {
     private lateinit var binding : FragmentCourseDetailsBinding
-    private var marginIsFixed = false
     private val audioService = AudioService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,11 +60,7 @@ class CourseDetailsFragment : Fragment() {
             val systemInsets = windowInsets?.getInsets(WindowInsetsCompat.Type.systemBars())
             val coordinatorLayout = binding.coordinatorLayout
 
-            if (!marginIsFixed) {
-                MarginFix.addBottomMargin(coordinatorLayout, systemInsets)
-
-                marginIsFixed = true
-            }
+            MarginFix.addBottomMargin(coordinatorLayout, systemInsets)
 
             insets
         }
