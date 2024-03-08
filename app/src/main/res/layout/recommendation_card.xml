@@ -3,14 +3,13 @@
     android:id="@+id/relatedStoryLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="186dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <View
         android:id="@+id/storyBg"
         android:layout_width="0dp"
         android:layout_height="113dp"
-        android:layout_marginEnd="20dp"
         android:background="@drawable/rounded_shape_10"
         android:backgroundTint="@color/focus_bg_color"
         app:layout_constraintEnd_toEndOf="parent"

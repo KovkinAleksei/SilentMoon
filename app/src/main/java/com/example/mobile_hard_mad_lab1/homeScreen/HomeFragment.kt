@@ -12,17 +12,15 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.common.MarginFix
-import com.example.mobile_hard_mad_lab1.common.fragments.ContinueMethodFragment
 import com.example.mobile_hard_mad_lab1.common.fragments.TabBarFragment
 import com.example.mobile_hard_mad_lab1.databinding.FragmentHomeBinding
-import com.example.mobile_hard_mad_lab1.databinding.FragmentTabBarBinding
 import com.example.mobile_hard_mad_lab1.homeScreen.model.HomeAdapter
-import com.example.mobile_hard_mad_lab1.homeScreen.service.RecommendatoinsService
+import com.example.mobile_hard_mad_lab1.homeScreen.service.RecommendationsService
 
 class HomeFragment : Fragment() {
     private lateinit var binding : FragmentHomeBinding
     private var marginIsFixed = false
-    private val recommendationService = RecommendatoinsService()
+    private val recommendationService = RecommendationsService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

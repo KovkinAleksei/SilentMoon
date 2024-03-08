@@ -4,7 +4,7 @@ import android.graphics.Color
 import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.homeScreen.model.RecommendationCard
 
-class RecommendatoinsService {
+class RecommendationsService {
     fun generateRecommendations() : Array<RecommendationCard> {
         return arrayOf(
             RecommendationCard(
@@ -21,7 +21,7 @@ class RecommendatoinsService {
                 name = "Focus",
                 imageResource = R.drawable.focus_bg,
                 bgColor = Color.parseColor("#AFDBC5")
-            ),
+            )
         )
     }
 }
