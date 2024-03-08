@@ -5,22 +5,28 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.homeScreen.model.RecommendationCard
 
 class RecommendationsService {
+    private val focus = "Focus"
+    private val happiness = "Happiness"
+
+    private val focusColor = "#AFDBC5"
+    private val happinessColor = "#FEE3B4"
+
     fun generateRecommendations() : Array<RecommendationCard> {
         return arrayOf(
             RecommendationCard(
-                name = "Focus",
+                name = focus,
                 imageResource = R.drawable.focus_bg,
-                bgColor = Color.parseColor("#AFDBC5")
+                bgColor = Color.parseColor(focusColor)
             ),
             RecommendationCard(
-                name = "Happiness",
+                name = happiness,
                 imageResource = R.drawable.happiness_bg,
-                bgColor = Color.parseColor("#FEE3B4")
+                bgColor = Color.parseColor(happinessColor)
             ),
             RecommendationCard(
-                name = "Focus",
+                name = focus,
                 imageResource = R.drawable.focus_bg,
-                bgColor = Color.parseColor("#AFDBC5")
+                bgColor = Color.parseColor(focusColor)
             )
         )
     }

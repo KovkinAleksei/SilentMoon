@@ -5,46 +5,60 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.chooseTopicScreen.model.TopicCard
 
 class ChooseTopicService {
+    private val reduceStress = "Reduce stress"
+    private val improvePerformance = "Improve Performance"
+    private val increaseHappiness = "Increase Happiness"
+    private val reduceAnxiety = "Reduce Anxiety"
+    private val personalGrowth = "Personal Growth"
+    private val betterSleep = "Better Sleep"
+    private val relax = "Relax"
+    private val improveFocus = "Improve focus"
+
+    private val firstColor = "#FFECCC"
+    private val secondColor = "#FEF9F3"
+    private val thirdColor = "#3F414E"
+    private val fourthColor = "#EBEAEC"
+
     fun getTopicCards() : Array<TopicCard> = arrayOf(
         TopicCard(
-            name = "Reduce stress",
+            name = reduceStress,
             imageResource = R.drawable.reduce_stress_bg,
-            textColor = Color.parseColor("#FFECCC")
+            textColor = Color.parseColor(firstColor)
         ),
         TopicCard(
-            name = "Improve Performance",
+            name = improvePerformance,
             imageResource = R.drawable.improve_performance_bg,
-            textColor = Color.parseColor("#FEF9F3")
+            textColor = Color.parseColor(secondColor)
         ),
         TopicCard(
-            name = "Increase Happiness",
+            name = increaseHappiness,
             imageResource = R.drawable.increase_happiness_bg,
-            textColor = Color.parseColor("#3F414E")
+            textColor = Color.parseColor(thirdColor)
         ),
         TopicCard(
-            name = "Reduce Anxiety",
+            name = reduceAnxiety,
             imageResource = R.drawable.reduce_anxiety_bg,
-            textColor = Color.parseColor("#3F414E")
+            textColor = Color.parseColor(thirdColor)
         ),
         TopicCard(
-            name = "Personal Growth",
+            name = personalGrowth,
             imageResource = R.drawable.personal_growth_bg,
-            textColor = Color.parseColor("#FFECCC")
+            textColor = Color.parseColor(firstColor)
         ),
         TopicCard(
-            name = "Better Sleep",
+            name = betterSleep,
             imageResource = R.drawable.better_sleep_bg,
-            textColor = Color.parseColor("#EBEAEC")
+            textColor = Color.parseColor(fourthColor)
         ),
         TopicCard(
-            name = "Relax",
+            name = relax,
             imageResource = R.drawable.relax_bg,
-            textColor = Color.parseColor("#FEF9F3")
+            textColor = Color.parseColor(secondColor)
         ),
         TopicCard(
-            name = "Improve focus",
+            name = improveFocus,
             imageResource = R.drawable.improve_focus_bg,
-            textColor = Color.parseColor("#FEF9F3")
+            textColor = Color.parseColor(secondColor)
         )
     )
 }

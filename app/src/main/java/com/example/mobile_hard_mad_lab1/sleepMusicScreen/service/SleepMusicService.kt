@@ -4,40 +4,44 @@ import com.example.mobile_hard_mad_lab1.R
 import com.example.mobile_hard_mad_lab1.sleepMusicScreen.model.SleepMusic
 
 class SleepMusicService {
+    private val nightIsland = "Night Island"
+    private val sweetSleep = "Sweet Sleep"
+    private val goodNight = "Good Night"
+    private val moonClouds = "Moon Clouds"
+
     fun generateSleepMusic() =
         arrayOf(
             SleepMusic(
-                name = "Night Island",
+                name = nightIsland,
                 image = R.drawable.story_image1
             ),
             SleepMusic(
-                name = "Sweet Sleep",
+                name = sweetSleep,
                 image = R.drawable.story_image2
             ),
             SleepMusic(
-                name = "Good Night",
+                name = goodNight,
                 image = R.drawable.story_image3
             ),
             SleepMusic(
-                name = "Moon Clouds",
+                name = moonClouds,
                 image = R.drawable.story_image4
             ),
             SleepMusic(
-                name = "Sweet Sleep",
+                name = sweetSleep,
                 image = R.drawable.story_image2
             ),
             SleepMusic(
-                name = "Night Island",
+                name = nightIsland,
                 image = R.drawable.story_image1
             ),
             SleepMusic(
-                name = "Moon Clouds",
+                name = moonClouds,
                 image = R.drawable.story_image4
             ),
             SleepMusic(
-                name = "Good Night",
+                name = goodNight,
                 image = R.drawable.story_image3
             ),
-
         )
 }
