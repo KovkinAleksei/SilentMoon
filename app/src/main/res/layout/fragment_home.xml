@@ -156,12 +156,15 @@
                 app:layout_constraintEnd_toEndOf="@+id/view" />
 
             <TextView
+                android:id="@+id/textView74"
                 style="@style/helvetica_medium_lightgray_11"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/duration"
                 app:layout_constraintBottom_toBottomOf="@+id/basicsCourseButton"
+                app:layout_constraintEnd_toStartOf="@+id/basicsCourseButton"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/view"
                 app:layout_constraintTop_toTopOf="@+id/basicsCourseButton" />
 
@@ -235,11 +238,13 @@
 
             <TextView
                 style="@style/helvetica_medium_11"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:text="@string/duration"
                 app:layout_constraintBottom_toBottomOf="@+id/relaxationMusicButton"
+                app:layout_constraintEnd_toStartOf="@+id/relaxationMusicButton"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/view2"
                 app:layout_constraintTop_toTopOf="@+id/relaxationMusicButton" />
 
